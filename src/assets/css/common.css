@@ -1,0 +1,93 @@
+
+.detail {
+  margin: 1rem .5rem;
+  box-shadow: 0 1px 6px -2px #8E8E8E;
+}
+
+.detail-title {
+  padding: .7rem 1rem;
+  border-bottom: 1px solid #f1f1f1;
+  background-color: #fff;
+}
+
+.detail-content {
+  padding: 1rem 1rem;
+  background-color: #fefefe;
+}
+
+.detail-footer {
+  border-top: 1px solid #f1f1f1;
+  background-color: #fefefe;
+}
+
+.detail-footer a {
+  display: block;
+  padding: .5rem 0;
+  color: #0079b7;
+}
+
+.confirm {
+  position: fixed;
+  display: none;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  transform: translate(-50%, -50%);
+  z-index: 3;
+}
+
+.confirm.open {
+  display: block;
+}
+
+.confirm.haserror {
+  display: block;
+  background: rgba(100, 100, 100, 0.25);
+}
+
+.confirm .detail {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  margin: 0;
+  transform: translate(-50%, -50%);
+}
+
+.confirm.openmsg {
+  display: block;
+}
+
+.watchsth {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: auto;
+  max-height: 0;
+  z-index: 100;
+  transition: max-height .3s linear;
+}
+
+.watchsth.open {
+  max-height: 50rem;
+}
+
+.record {
+  padding: .5rem 0;
+  border-bottom: 1px solid #ccc;
+}
+
+input[type='date'] {
+  display: block;
+}
+
+@media (min-width: 1024px) {
+  .confirm {
+    left: calc(50% + 125px);
+    width: calc(100% - 250px);
+  }
+
+  .watchsth {
+    width: calc(100% - 250px);
+  }
+}
