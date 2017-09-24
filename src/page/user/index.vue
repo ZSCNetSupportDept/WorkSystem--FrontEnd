@@ -139,15 +139,15 @@
 
     <div :class="{ openmsg: openMsg }" class="confirm">
       <div class="detail">
-        <div class="detail-title">
+        <div class="detail__title">
           <h2>提示信息</h2>
-        </div><!-- / detail-title -->
-        <div class="detail-content">
+        </div><!-- / detail__title -->
+        <div class="detail__content">
           <p>{{ message }}</p>
-        </div><!-- / detail-content -->
-        <div class="detail-footer">
+        </div><!-- / detail__content -->
+        <div class="detail__footer">
           <a @click="iKnow" href="javascript:void(0);">{{Math.random() < .5 ? '我知道了~' : '朕知道啦~'}}</a>
-        </div><!-- /detail-footer -->
+        </div><!-- /detail__footer -->
       </div><!-- / detail -->
     </div><!-- / confirm -->
   </div><!-- / home -->
@@ -393,8 +393,14 @@
   }
 
   .child-view {
-    margin-top: 3.5rem;
+    padding-top: 3.5rem;
     -webkit-overflow-scrolling: touch;
+  }
+
+  .detail__footer a {
+    display: block;
+    padding: .5rem 0;
+    color: #0079b7;
   }
 
   @media (min-width: 1024px) {

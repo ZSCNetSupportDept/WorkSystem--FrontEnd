@@ -1,14 +1,14 @@
 <template>
   <div class="search-user">
     <div class="detail">
-      <div class="detail-title">
+      <div class="detail__title">
         <h2>查询条件</h2>
-      </div><!-- / detail-title -->
-      <div class="detail-content">
+      </div><!-- / detail__title -->
+      <div class="detail__content">
         <text-input v-model="userPhone" type="text" label="用户联系电话" placeholder="联系电话"></text-input>
 
         <buttons value="查询" :click="submit"></buttons>
-      </div><!-- / detail-content -->
+      </div><!-- / detail__content -->
     </div><!-- / detail -->
 
     <template v-for="task in search">
@@ -17,8 +17,8 @@
 
     <div class="watchsth" :class="{ 'open': isOpen }">
       <div class="detail">
-        <div class="detail-title">{{ '#' + currentTask }}</div><!-- / detail-title -->
-        <div class="detail-content">
+        <div class="detail__title">{{ '#' + currentTask }}</div><!-- / detail__title -->
+        <div class="detail__content">
           <template v-for="task in search" v-if="task.id === currentTask">
             <template v-for="record in task.history">
               <div class="record">

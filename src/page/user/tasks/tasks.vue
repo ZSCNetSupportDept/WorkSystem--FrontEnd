@@ -30,8 +30,8 @@
 
     <div class="watchsth" :class="{ 'open': isOpen }">
       <div class="detail">
-        <div class="detail-title">{{ '#' + currentTask }}</div><!-- / detail-title -->
-        <div class="detail-content">
+        <div class="detail__title">{{ '#' + currentTask }}</div><!-- / detail__title -->
+        <div class="detail__content">
           <select-box v-model="repairStatus" :default="statusOptions.indexOf(repairStatus)" :options="statusOptions"
                       label="维修状态"></select-box>
 
@@ -41,7 +41,7 @@
           <check-box-group v-model="repairWorkers" :sources="workers" label="维护人员"></check-box-group>
 
           <buttons value="提交修改" :click="submit"></buttons>
-        </div><!-- / detail-content -->
+        </div><!-- / detail__content -->
       </div><!-- / detail -->
     </div><!-- / watchsth -->
   </div><!-- / tasks -->
@@ -238,7 +238,7 @@
 
 <style scoped>
   .tasks {
-    margin-top: 3rem;
+    padding-top: 3rem;
   }
 
   .tag {

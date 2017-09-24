@@ -2,10 +2,10 @@
 
 <template>
   <div class="contacts detail">
-    <div class="detail-title">
+    <div class="detail__title">
       <h2>常用联系电话</h2>
-    </div><!-- / detail-title -->
-    <div class="detail-content">
+    </div><!-- / detail__title -->
+    <div class="detail__content">
       <div>
         <table>
           <thead>
@@ -67,7 +67,7 @@
           </tbody>
         </table>
       </div><!-- / -->
-    </div><!-- / detail-content -->
+    </div><!-- / detail__content -->
   </div><!-- / contacts -->
 </template>
 
@@ -76,7 +76,7 @@
 </script>
 
 <style scoped>
-  .contacts .detail-content div {
+  .contacts .detail__content div {
     border: 1px solid #e6e6e6;
     border-top: none;
     width: 100%;

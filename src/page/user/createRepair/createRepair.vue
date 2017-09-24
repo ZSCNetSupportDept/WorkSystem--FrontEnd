@@ -3,58 +3,58 @@
 <template>
   <div class="create-repair">
     <div class="repair-status detail">
-      <div class="detail-title">
+      <div class="detail__title">
         <h2>报修状态</h2>
-      </div><!-- / detail-title -->
-      <div class="detail-content">
+      </div><!-- / detail__title -->
+      <div class="detail__content">
         <select-box v-model="repairStatus" :options="statusOptions"></select-box>
-      </div><!-- / detail-content -->
+      </div><!-- / detail__content -->
     </div><!-- / repair-status -->
 
     <div class="user-info detail">
-      <div class="detail-title">
+      <div class="detail__title">
         <h2>用户信息</h2>
-      </div><!-- / detail-title -->
-      <div class="detail-content">
+      </div><!-- / detail__title -->
+      <div class="detail__content">
         <text-input v-model="userPhone" :data="userPhone" type="text" label="联系电话" placeholder="电话(必填)"></text-input>
 
         <select-box v-model="userPlace" :options="placeOptions" :default="placeOptions.indexOf(userPlace)" label="宿舍"
                     :disabled="true"></select-box>
 
         <text-input v-model="userHouse" :data="userHouse" type="text" placeholder="宿舍号(必填)"></text-input>
-      </div><!-- / detail-content -->
+      </div><!-- / detail__content -->
     </div><!-- / user-info -->
 
     <div class="net-info detail">
-      <div class="detail-title">
+      <div class="detail__title">
         <h2>宽带信息</h2>
-      </div><!-- / detail-title -->
-      <div class="detail-content">
+      </div><!-- / detail__title -->
+      <div class="detail__content">
         <select-box v-model="netInfo" :options="netOptions"></select-box>
 
         <text-input v-model="netAccount" :data="netAccount" type="text" placeholder="不需要输入任何前缀后缀"></text-input>
-      </div><!-- / detail-content -->
+      </div><!-- / detail__content -->
     </div><!-- / net-info -->
 
     <div class="repair-record detail">
-      <div class="detail-title">
+      <div class="detail__title">
         <h2>维护记录</h2>
-      </div><!-- / detail-title -->
-      <div class="detail-content">
+      </div><!-- / detail__title -->
+      <div class="detail__content">
         <text-input v-model="repairDetail" :data="repairDetail" type="text" placeholder="必填"></text-input>
 
         <check-box-group v-model="repairWorkers" :sources="workers" label="维护人员"></check-box-group>
-      </div><!-- / detail-content -->
+      </div><!-- / detail__content -->
     </div><!-- / repair-record -->
 
     <buttons value="创建报修单" :click="verify"></buttons>
 
     <div class="confirm" :class="{ 'open': isOpen }">
       <div class="detail">
-        <div class="detail-title">
+        <div class="detail__title">
           <h2>信息确认</h2>
-        </div><!-- / detail-title -->
-        <div class="detail-content">
+        </div><!-- / detail__title -->
+        <div class="detail__content">
           <p>报修状态：{{ repairStatus }}</p>
           <p>联系电话：{{ userPhone }}</p>
           <p>宿舍片区：{{ userPlace }}</p>
@@ -64,7 +64,7 @@
           <p>维修简介：{{ repairDetail }}</p>
           <buttons value="确认提交" :click="submit"></buttons>
           <buttons value="进行修改" :click="cancel"></buttons>
-        </div><!-- / detail-content -->
+        </div><!-- / detail__content -->
       </div><!-- / detail -->
     </div><!-- / confirm -->
   </div><!-- / create-repair -->

@@ -2,17 +2,17 @@
   <div class="search-exp">
     <template v-for="exp in experience">
       <div class="detail">
-        <div class="detail-title">
+        <div class="detail__title">
           <h2>{{ exp.title }}</h2>
-        </div>
-        <div class="detail-content">
+        </div><!-- / detail__title -->
+        <div class="detail__content">
           <p>添加人员：{{ exp.name + ' ' + exp.number }}</p>
           <p>添加时间：{{ exp.time.slice(0, 10) + ' ' + exp.time.slice(11, 16) }}</p>
           <p>经验内容：{{ exp.record }}</p>
-        </div>
-      </div>
+        </div><!-- / detail__content -->
+      </div><!-- / detail -->
     </template>
-  </div>
+  </div><!-- / search-exp -->
 </template>
 
 <script>

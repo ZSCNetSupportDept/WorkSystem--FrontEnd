@@ -2,12 +2,12 @@
   <div class="registerwork">
     <div v-if="registerStatus===0">
       <div class="detail">
-        <div class="detail-title">
+        <div class="detail__title">
           <h2>蹭班申请</h2>
-        </div><!-- / detail-title -->
-        <div class="detail-content">
+        </div><!-- / detail__title -->
+        <div class="detail__content">
           <select-box v-model="registerDay" :options="dayOptions" label="蹭班日期"></select-box>
-        </div><!-- / detail-content -->
+        </div><!-- / detail__content -->
       </div><!-- / detail -->
 
       <buttons value="提交申请" :click="submit"></buttons>
@@ -15,20 +15,20 @@
 
     <div v-else-if="registerStatus===1">
       <div class="detail">
-        <div class="detail-title">
+        <div class="detail__title">
           <h2>蹭班申请</h2>
-        </div><!-- / detail-title -->
-        <div class="detail-content">
+        </div><!-- / detail__title -->
+        <div class="detail__content">
           <p>你的蹭班申请已通过，请于{{ registerDay }}准时前往{{ passPlace }}值班</p>
-        </div><!-- / detail-content -->
+        </div><!-- / detail__content -->
       </div><!-- / detail -->
       <div class="detail">
-        <div class="detail-title">
+        <div class="detail__title">
           <h2>蹭班申请</h2>
-        </div><!-- / detail-title -->
-        <div class="detail-content">
+        </div><!-- / detail__title -->
+        <div class="detail__content">
           <select-box v-model="registerDay" :options="dayOptions" label="蹭班日期"></select-box>
-        </div><!-- / detail-content -->
+        </div><!-- / detail__content -->
 
         <buttons value="提交申请" :click="submit"></buttons>
       </div><!-- / detail -->
@@ -36,21 +36,21 @@
 
     <div v-else-if="registerStatus===2">
       <div class="detail">
-        <div class="detail-title">
+        <div class="detail__title">
           <h2>蹭班申请</h2>
-        </div><!-- / detail-title -->
-        <div class="detail-content">
+        </div><!-- / detail__title -->
+        <div class="detail__content">
           <p>你对于{{ registerDay }}的蹭班申请由于某些原因未通过，请见谅</p>
           <p>组长回复：{{ whyReject }}</p>
-        </div><!-- / detail-content -->
+        </div><!-- / detail__content -->
       </div><!-- / detail -->
       <div class="detail">
-        <div class="detail-title">
+        <div class="detail__title">
           <h2>蹭班申请</h2>
-        </div><!-- / detail-title -->
-        <div class="detail-content">
+        </div><!-- / detail__title -->
+        <div class="detail__content">
           <select-box v-model="registerDay" :options="dayOptions" label="蹭班日期"></select-box>
-        </div><!-- / detail-content -->
+        </div><!-- / detail__content -->
 
         <buttons value="提交申请" :click="submit"></buttons>
       </div><!-- / detail -->
@@ -58,12 +58,12 @@
 
     <div v-else-if="registerStatus===3">
       <div class="detail">
-        <div class="detail-title">
+        <div class="detail__title">
           <h2>蹭班申请</h2>
-        </div><!-- / detail-title -->
-        <div class="detail-content">
+        </div><!-- / detail__title -->
+        <div class="detail__content">
           <p>你对于{{ registerDay }}的蹭班申请尚在申请中，请耐心等待</p>
-        </div><!-- / detail-content -->
+        </div><!-- / detail__content -->
       </div><!-- / detail -->
     </div><!-- / 申请未处理 -->
   </div><!-- / registerwork -->

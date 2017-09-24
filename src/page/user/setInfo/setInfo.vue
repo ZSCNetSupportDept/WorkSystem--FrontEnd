@@ -1,10 +1,10 @@
 <template>
   <div class="setinfo">
     <div class="detail">
-      <div class="detail-title">
+      <div class="detail__title">
         <h2>修改个人信息</h2>
-      </div><!-- / detailt-title -->
-      <div class="detail-content">
+      </div><!-- / detailt__title -->
+      <div class="detail__content">
         <select-box v-model="workDay" :options="dayOptions" label="工作日"></select-box>
 
         <select-box v-model="workPlace" :options="placeOptions" label="值班片区"></select-box>
@@ -12,7 +12,7 @@
         <text-input v-model="phone" label="手机号码" type="text"></text-input>
 
         <text-input v-model="workPhone" label="工作号码" type="text"></text-input>
-      </div><!-- / detail-content -->
+      </div><!-- / detail__content -->
     </div><!-- / detail -->
 
     <buttons value="提交修改" :click="submit"></buttons>

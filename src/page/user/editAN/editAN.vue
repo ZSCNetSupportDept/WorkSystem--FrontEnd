@@ -3,12 +3,12 @@
 <template>
   <div class="editan">
     <div class="detail">
-      <div class="detail-title">
+      <div class="detail__title">
         <h2>编辑公告</h2>
-      </div><!-- / detail-title -->
-      <div class="detail-content">
+      </div><!-- / detail__title -->
+      <div class="detail__content">
         <text-input v-model="newAN" type="text"></text-input>
-      </div><!-- / detail-content -->
+      </div><!-- / detail__content -->
     </div><!-- / detail -->
 
     <buttons value="提交修改" :click="submit"></buttons>

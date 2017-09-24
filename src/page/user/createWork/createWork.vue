@@ -3,39 +3,39 @@
 <template>
   <div class="create-work">
     <div class="work-info detail">
-      <div class="detail-title">
+      <div class="detail__title">
         <h2>值班信息</h2>
-      </div><!-- / detail-title -->
-      <div class="detail-content">
+      </div><!-- / detail__title -->
+      <div class="detail__content">
         <select-box v-model="choosePlace" :options="options" label="值班片区" :disabled="isWorked"
                     :default="options.indexOf(choosePlace)"></select-box>
 
         <check-box label="携带工具箱" v-model="hasTools" :check="hasTools"></check-box>
-      </div><!-- / detail-content -->
+      </div><!-- / detail__content -->
     </div><!-- / work-info -->
 
     <div class="check-tools detail" :class="{ active: hasTools }">
-      <div class="detail-title">
+      <div class="detail__title">
         <h2>工具箱</h2>
-      </div><!-- / detail-title -->
-      <div class="detail-content">
+      </div><!-- / detail__title -->
+      <div class="detail__content">
         <check-box-group :sources="nowTools" v-model="toolKit"></check-box-group>
 
         <text-input type="text" v-model="toolsDetail" placeholder="None" label="备注"></text-input>
-      </div><!-- / detail-content -->
+      </div><!-- / detail__content -->
     </div><!-- / check-tools -->
 
     <buttons :value="isWorked?'结束值班':'开始值班'" :click="submit"></buttons>
 
     <div class="confirm" :class="{ 'open': isOpen }">
       <div class="detail">
-        <div class="detail-content">
+        <div class="detail__content">
           <p v-if="!isWorked">现在不是正常值班时间，你是否确定要签到，还是只是随便浏览一下</p>
           <p v-if="isWorked">尚有未解决状态的任务分类：投诉{{ noWorked.fuck }}单，电信{{ noWorked.dianxin }}单，移动{{ noWorked.yidong
             }}单，联通{{ noWorked.liantong }}单，普通{{ noWorked.general }}单</p>
           <buttons :value="isWorked?'确认签退':'确认签到'" :click="confirm1"></buttons>
           <buttons :value="isWorked?'看看任务':'随便看看'" :click="confirm2"></buttons>
-        </div><!-- / detail-content -->
+        </div><!-- / detail__content -->
       </div><!-- / detail -->
     </div><!-- / confirm -->
   </div><!-- / create-work -->

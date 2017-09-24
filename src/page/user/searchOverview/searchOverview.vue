@@ -1,30 +1,30 @@
 <template>
   <div class="search-work">
     <div class="detail">
-      <div class="detail-title">
+      <div class="detail__title">
         <h2>查询条件</h2>
-      </div><!-- / detail-title -->
-      <div class="detail-content">
+      </div><!-- / detail__title -->
+      <div class="detail__content">
         <label for="begin">起始日期</label>
         <input v-model="beginDate" type="date" id="begin" :value="beginDate">
         <label for="end">结束日期</label>
         <input v-model="endDate" type="date" id="end" :value="endDate">
 
-        <buttons value="查询" @click="submit"></buttons>
-      </div><!-- / detail-content -->
+        <buttons value="查询" :click="submit"></buttons>
+      </div><!-- / detail__content -->
     </div><!-- / detail -->
 
     <div class="detail day-detail" :class="{ active:isActive }">
-      <div class="detail-title">
+      <div class="detail__title">
         <h2>{{ beginDate + '到' + endDate + '的值班情况'}}</h2>
-      </div><!-- / detail-title -->
-      <div class="detail-content">
+      </div><!-- / detail__title -->
+      <div class="detail__content">
         <p>当天共有{{ overview.done + overview.undone + overview.reported + overview.tomorrow }}单</p>
         <p>已解决{{ overview.done }}单</p>
         <p>未解决{{ overview.undone }}单</p>
         <p>推迟{{ overview.reported }}单</p>
         <p>上报{{ overview.tomorrow }}单</p>
-      </div><!-- / detail-content -->
+      </div><!-- / detail__content -->
     </div><!-- / detail -->
   </div><!-- / search-work -->
 </template>
@@ -62,7 +62,7 @@
         })
         this.$store.dispatch('POST_SEARCH', postData).then(data => {
           if (data.success) {
-            this.overview = data.overview
+            this.$set(this.overview, data)
             this.isActive = true
           } else {
             this.$store.dispatch('openMsg', '服务器出问题了')

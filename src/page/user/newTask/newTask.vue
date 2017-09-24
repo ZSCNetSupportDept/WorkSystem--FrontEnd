@@ -1,64 +1,64 @@
 <template>
   <div class="newtask">
     <div class="task-property detail">
-      <div class="detail-title">
+      <div class="detail__title">
         <h2>任务性质</h2>
-      </div><!-- / detail-title -->
-      <div class="detail-content">
+      </div><!-- / detail__title -->
+      <div class="detail__content">
         <select-box v-model="taskProperty" :options="taskOptions"></select-box>
-      </div><!-- / detail-content -->
+      </div><!-- / detail__content -->
     </div><!-- task-property -->
 
     <div class="repair-status detail">
-      <div class="detail-title">
+      <div class="detail__title">
         <h2>报修状态</h2>
-      </div><!-- / detail-title -->
-      <div class="detail-content">
+      </div><!-- / detail__title -->
+      <div class="detail__content">
         <select-box v-model="taskStatus" :options="statusOptions"></select-box>
-      </div><!-- / detail-content -->
+      </div><!-- / detail__content -->
     </div><!-- / repair-status -->
 
     <div class="user-info detail">
-      <div class="detail-title">
+      <div class="detail__title">
         <h2>用户信息</h2>
-      </div><!-- / detail-title -->
-      <div class="detail-content">
+      </div><!-- / detail__title -->
+      <div class="detail__content">
         <text-input v-model="userPhone" :data="userPhone" type="text" label="联系电话" placeholder="电话(必填)"></text-input>
 
         <select-box v-model="userPlace" :options="placeOptions" label="宿舍"></select-box>
 
         <text-input v-model="userHouse" :data="userHouse" type="text" placeholder="宿舍号(必填)"></text-input>
-      </div><!-- / detail-content -->
+      </div><!-- / detail__content -->
     </div><!-- / user-info -->
 
     <div class="net-info detail">
-      <div class="detail-title">
+      <div class="detail__title">
         <h2>宽带信息</h2>
-      </div><!-- / detail-title -->
-      <div class="detail-content">
+      </div><!-- / detail__title -->
+      <div class="detail__content">
         <select-box v-model="netInfo" :options="netOptions"></select-box>
 
         <text-input v-model="netAccount" :data="netAccount" type="text" placeholder="不需要输入任何前缀后缀"></text-input>
-      </div><!-- / detail-content -->
+      </div><!-- / detail__content -->
     </div><!-- / net-info -->
 
     <div class="detail">
-      <div class="detail-title">
+      <div class="detail__title">
         <h2>任务简述</h2>
-      </div><!-- / detail-title -->
-      <div class="detail-content">
+      </div><!-- / detail__title -->
+      <div class="detail__content">
         <text-input v-model="introduction" :data="introduction" type="text"></text-input>
-      </div><!-- / detail-content -->
+      </div><!-- / detail__content -->
     </div><!-- / detail -->
 
     <buttons value="新增任务" :click="verify"></buttons>
 
     <div class="confirm" :class="{ 'open': isOpen }">
       <div class="detail">
-        <div class="detail-title">
+        <div class="detail__title">
           <h2>信息确认</h2>
-        </div><!-- / detail-title -->
-        <div class="detail-content">
+        </div><!-- / detail__title -->
+        <div class="detail__content">
           <p>报修状态：{{ taskStatus }}</p>
           <p>联系电话：{{ userPhone }}</p>
           <p>宿舍片区：{{ userPlace }}</p>
@@ -68,7 +68,7 @@
           <p>维修简介：{{ introduction }}</p>
           <buttons value="确认提交" :click="submit"></buttons>
           <buttons value="进行修改" :click="cancel"></buttons>
-        </div><!-- / detail-content -->
+        </div><!-- / detail__content -->
       </div><!-- / detail -->
     </div><!-- / confirm -->
   </div><!-- / newtask -->

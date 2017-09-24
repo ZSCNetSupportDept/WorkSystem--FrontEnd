@@ -1,6 +1,6 @@
 <template>
   <div class="task detail" @click="dosth(task.id)">
-    <div class="detail-title"
+    <div class="detail__title"
          v-bind:class="{
          ok: task.repairStatus==1,
          no: task.repairStatus==0,
@@ -11,8 +11,8 @@
         #{{ task.id + ' ' + (task.repairStatus === 0 ? '未解决' : task.repairStatus === 1 ? '已解决'
         : task.repairStatus === 2 ? '推迟' : '已上报')
         }}</h2>
-    </div><!-- / detail-title -->
-    <div class="detail-content">
+    </div><!-- / detail__title -->
+    <div class="detail__content">
       <p>
         任务性质：{{ task.taskProperty === 0 ? '普通任务' : task.taskProperty === 1 ? '工单任务' : task.taskProperty === 2 ? '新装任务' : '投诉任务'
         }}</p>
@@ -22,7 +22,7 @@
       <p>联系方式：{{ task.userPhone }}</p>
       <p>运营商信息：{{ task.netInfo + (task.netAccount ? ('(' + task.netAccount + ')') : '') }}</p>
       <p>维修简介：{{ task.repairIntro }}</p>
-    </div><!-- / detail-content -->
+    </div><!-- / detail__content -->
   </div><!-- / task -->
 </template>
 

@@ -1,31 +1,31 @@
 <template>
   <div class="overview">
     <div class="announcement detail">
-      <div class="detail-title">
+      <div class="detail__title">
         <h2>公告</h2>
-      </div><!-- / detail-title -->
-      <div class="detail-content">
+      </div><!-- / detail__title -->
+      <div class="detail__content">
         <p>{{ announce }}</p>
-      </div><!-- / detail-content -->
+      </div><!-- / detail__content -->
     </div><!-- / announcement -->
 
     <div class="overview-content detail">
-      <div class="detail-title">
+      <div class="detail__title">
         <h2>今日概览</h2>
-      </div><!-- / detail-title -->
-      <div class="detail-content">
+      </div><!-- / detail__title -->
+      <div class="detail__content">
         <p>今日投诉工单数量为：{{ overview.complaints }}</p>
         <p>今日电信工单数量为：{{ overview.telecom }}</p>
         <p>今日联通工单数量为：{{ overview.unicom }}</p>
         <p>今日移动工单数量为：{{ overview.mobile }}</p>
-      </div><!-- / detail-content -->
+      </div><!-- / detail__content -->
     </div><!-- / overview-content -->
 
     <div class="today-worker detail">
-      <div class="detail-title">
+      <div class="detail__title">
         <h2>今日值班人员</h2>
-      </div><!-- / detail-title -->
-      <div class="detail-content">
+      </div><!-- / detail__title -->
+      <div class="detail__content">
         <ul>
           <li v-for="place in places" :class="{'open': selectPlace === place}">
             <a @click="selectPlace = selectPlace===place?'':place">{{ place }}<span>{{ selectPlace === place ? '-' : '+'}}</span></a>
@@ -54,7 +54,7 @@
             </div><!-- / tb-workers -->
           </li>
         </ul>
-      </div><!-- / detail-content -->
+      </div><!-- / detail__content -->
     </div><!-- / today-worker -->
   </div><!-- / overview -->
 </template>
@@ -89,12 +89,12 @@
     padding: 1.3rem 1rem;
   }
 
-  .announcement .detail-content {
+  .announcement .detail__content {
     padding: 1rem .8rem;
     border-left: .2rem solid #ff3131;
   }
 
-  .today-worker .detail-content {
+  .today-worker .detail__content {
     padding: 0;
   }
 

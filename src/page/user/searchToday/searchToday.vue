@@ -1,14 +1,14 @@
 <template>
   <div class="today-finish">
     <div class="detail">
-      <div class="detail-title">
+      <div class="detail__title">
         <h2>查询条件</h2>
-      </div><!-- / detail-title -->
-      <div class="detail-content">
+      </div><!-- / detail__title -->
+      <div class="detail__content">
         <select-box v-model="choosePlace" :options="placeOptions" :default="0"></select-box>
 
         <buttons value="查询" :click="submit"></buttons>
-      </div><!-- / detail-title -->
+      </div><!-- / detail__title -->
     </div>
 
     <template v-for="task in search">

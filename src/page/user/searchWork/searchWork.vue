@@ -1,22 +1,22 @@
 <template>
   <div class="search-work">
     <div class="detail">
-      <div class="detail-title">
+      <div class="detail__title">
         <h2>查询条件</h2>
-      </div><!-- / detail-title -->
-      <div class="detail-content">
+      </div><!-- / detail__title -->
+      <div class="detail__content">
         <label for="searchdate">查询日期</label>
         <input v-model="searchDate" type="date" id="searchdate" :value="searchDate">
 
         <buttons value="查询" :click="submit"></buttons>
-      </div><!-- / detail-content -->
+      </div><!-- / detail__content -->
     </div>
 
     <div class="detail day-detail" :class="{ active:isActive }">
-      <div class="detail-title">
+      <div class="detail__title">
         <h2>{{ searchDate + '的签到签退情况'}}</h2>
-      </div><!-- / detail-title -->
-      <div class="detail-content" v-for="item in search">
+      </div><!-- / detail__title -->
+      <div class="detail__content" v-for="item in search">
         <p>{{ item.name + ' ' + item.id }}</p>
         <p>是否签退：{{ item.check ? '是' : '否' }}</p>
         <p>地点：{{ item.check_area }}</p>
@@ -31,7 +31,7 @@
           }}</p>
         <p v-if="item.taken_toolkit && item.toolkit.detailed_description">工具包详细：{{ item.toolkit.detailed_description
           }}</p>
-      </div><!-- / detail-content -->
+      </div><!-- / detail__content -->
     </div><!-- / detail -->
   </div><!-- / search-work -->
 </template>
@@ -74,7 +74,7 @@
 </script>
 
 <style scoped>
-  .search-work .detail-content {
-    border-bottom: 1px solid #dcdcdc;
+  .day-detail .detail__content {
+    border-bottom: 1px solid #f1f1f1;
   }
 </style>

@@ -1,12 +1,11 @@
 <template>
   <div class="detail add-exp">
-    <div class="detail-content">
+    <div class="detail__content">
       <text-input v-model="ExpTitle" type="text" placeholder="标题"></text-input>
       <text-input v-model="Exp" type="text" placeholder="内容"></text-input>
 
-      <!--<input type="button" value="提交" @click="submit">-->
       <buttons value="提交" :click="submit"></buttons>
-    </div><!-- / detail-content -->
+    </div><!-- / detail__content -->
   </div><!-- / detail -->
 </template>
 

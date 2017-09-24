@@ -1,9 +1,9 @@
 <template>
   <div class="today-finish">
     <div class="detail">
-      <div class="detail-title">
+      <div class="detail__title">
         <h2>今日完成情况</h2>
-      </div><!-- / detail-title -->
+      </div><!-- / detail__title -->
     </div><!-- / detail -->
 
     <template v-for="task in search">
@@ -12,8 +12,8 @@
 
     <div class="watchsth" :class="{ 'open': isOpen }">
       <div class="detail">
-        <div class="detail-title">{{ '#' + currentTask }}</div><!-- / detail-title -->
-        <div class="detail-content">
+        <div class="detail__title">{{ '#' + currentTask }}</div><!-- / detail__title -->
+        <div class="detail__content">
           <template v-for="task in search" v-if="task.id === currentTask">
             <template v-for="record in task.history">
               <div class="record">
@@ -32,7 +32,7 @@
               </div><!-- / record -->
             </template>
           </template>
-        </div><!-- / detail-content -->
+        </div><!-- / detail__content -->
       </div><!-- / detail -->
     </div><!-- / watchsth -->
   </div><!-- / today-finish -->

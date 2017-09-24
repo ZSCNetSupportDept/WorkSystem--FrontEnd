@@ -4,26 +4,20 @@
   box-shadow: 0 1px 6px -2px #8E8E8E;
 }
 
-.detail-title {
+.detail__title {
   padding: .7rem 1rem;
   border-bottom: 1px solid #f1f1f1;
   background-color: #fff;
 }
 
-.detail-content {
+.detail__content {
   padding: 1rem 1rem;
   background-color: #fefefe;
 }
 
-.detail-footer {
+.detail__footer {
   border-top: 1px solid #f1f1f1;
   background-color: #fefefe;
-}
-
-.detail-footer a {
-  display: block;
-  padding: .5rem 0;
-  color: #0079b7;
 }
 
 .confirm {

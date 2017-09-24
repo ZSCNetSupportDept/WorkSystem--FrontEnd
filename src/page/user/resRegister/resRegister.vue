@@ -1,18 +1,18 @@
 <template>
   <div class="res-register">
     <div v-for="man in registerMan" @click="change(man.id,man.name)" class="detail">
-      <div class="detail-content">
+      <div class="detail__content">
         <p>申请人：{{ man.work_number + ' ' + man.name }}</p>
         <p>申请日期：{{ man['extra_work_time'] }}</p>
-      </div><!-- / detail-content -->
+      </div><!-- / detail__content -->
     </div><!-- / detail -->
 
     <div class="watchsth" :class="{ 'open': isOpen }">
       <div class="detail">
-        <div class="detail-title">
+        <div class="detail__title">
           <h2>{{ currentID + ' ' + currentName}}</h2>
-        </div><!-- / detail-title -->
-        <div class="detail-content">
+        </div><!-- / detail__title -->
+        <div class="detail__content">
           <check-box v-model="resPass" :check="resPass" label="是否通过"></check-box>
 
           <select-box v-if="resPass" v-model="resPlace" :options="placeOptions" label="分配片区"></select-box>
@@ -20,7 +20,7 @@
           <text-input v-if="!resPass" v-model="resWhy" label="拒绝理由" type="text"></text-input>
 
           <buttons value="提交" :click="submit"></buttons>
-        </div><!-- / detail-content -->
+        </div><!-- / detail__content -->
       </div><!-- / detail -->
     </div><!-- / watchsth -->
   </div><!-- / res-register -->
