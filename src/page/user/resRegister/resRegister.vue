@@ -27,11 +27,11 @@
 </template>
 
 <script>
-  import selectBox from '../views/selectBox.vue'
-  import checkBox from '../views/checkBox.vue'
-  import textInput from '../views/textInput.vue'
+  import selectBox from '../../../components/selectBox.vue'
+  import checkBox from '../../../components/checkBox.vue'
+  import textInput from '../../../components/textInput.vue'
   import {mapState} from 'vuex'
-  import buttons from '../views/button.vue'
+  import buttons from '../../../components/button.vue'
 
   export default {
     components: {

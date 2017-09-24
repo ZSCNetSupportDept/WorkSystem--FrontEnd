@@ -49,9 +49,9 @@
 </template>
 
 <script>
-  import task from '../views/task.vue'
-  import selectBox from '../views/selectBox.vue'
-  import buttons from '../views/button.vue'
+  import task from '../../../components/task.vue'
+  import selectBox from '../../../components/selectBox.vue'
+  import buttons from '../../../components/button.vue'
   import {mapState} from 'vuex'
 
   export default {

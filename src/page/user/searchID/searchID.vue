@@ -49,10 +49,10 @@
 </template>
 
 <script>
-  import task from '../views/task.vue'
-  import textInput from '../views/textInput.vue'
+  import task from '../../../components/task.vue'
+  import textInput from '../../../components/textInput.vue'
   import {mapState} from 'vuex'
-  import buttons from '../views/button.vue'
+  import buttons from '../../../components/button.vue'
 
   export default {
     components: {

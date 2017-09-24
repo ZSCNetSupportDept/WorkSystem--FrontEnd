@@ -20,9 +20,9 @@
 </template>
 
 <script>
-  import selectBox from '../views/selectBox.vue'
-  import textInput from '../views/textInput.vue'
-  import buttons from '../views/button.vue'
+  import selectBox from '../../../components/selectBox.vue'
+  import textInput from '../../../components/textInput.vue'
+  import buttons from '../../../components/button.vue'
 
   export default {
     components: {

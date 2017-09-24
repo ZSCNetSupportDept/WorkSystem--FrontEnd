@@ -16,8 +16,8 @@
 </template>
 
 <script>
-  import textInput from '../views/textInput.vue'
-  import buttons from '../views/button.vue'
+  import textInput from '../../../components/textInput.vue'
+  import buttons from '../../../components/button.vue'
 
   export default {
     components: {

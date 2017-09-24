@@ -70,8 +70,8 @@
 </template>
 
 <script>
-  import selectBox from '../views/selectBox.vue'
-  import buttons from '../views/button.vue'
+  import selectBox from '../../../components/selectBox.vue'
+  import buttons from '../../../components/button.vue'
 
   export default {
     components: {

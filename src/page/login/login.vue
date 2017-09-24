@@ -21,9 +21,9 @@
 </template>
 
 <script>
-  import textInput from './views/textInput.vue'
-  import checkBox from './views/checkBox.vue'
-  import loading from './views/loading.vue'
+  import textInput from '../../components/textInput.vue'
+  import checkBox from '../../components/checkBox.vue'
+  import loading from '../../components/loading.vue'
   import {mapState} from 'vuex'
 
   export default {

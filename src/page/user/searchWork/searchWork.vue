@@ -37,7 +37,7 @@
 </template>
 
 <script>
-  import buttons from '../views/button.vue'
+  import buttons from '../../../components/button.vue'
 
   export default {
     components: {

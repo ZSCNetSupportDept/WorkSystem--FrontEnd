@@ -1,28 +1,28 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import Login from 'components/Login'
-import index from 'components/index'
-import overview from 'components/users/overview'
-import createWork from 'components/users/createWork'
-import contacts from 'components/users/contacts'
-import createRepair from 'components/users/createRepair'
-import setPassword from 'components/users/setPassword'
-import setInfo from 'components/users/setInfo'
-import register from 'components/users/registerWork'
-import editan from 'components/users/editan'
-import resregister from 'components/users/resregister'
-import newTask from 'components/users/newTask'
-import todayFinish from 'components/users/todayFinish'
-import searchToday from 'components/users/searchToday'
-import searchUser from 'components/users/searchUser'
-import searchID from 'components/users/searchID'
-import searchDay from 'components/users/searchDay'
-import searchOverview from 'components/users/searchOverview'
-import searchWork from 'components/users/searchWork'
-import searchExp from 'components/users/searchExp'
-import addExp from 'components/users/addExp'
+import Login from '../page/login/login.vue'
+import index from '../page/user/index.vue'
+import overview from '../page/user/overview/overview.vue'
+import createWork from '../page/user/createWork/createWork.vue'
+import contacts from '../page/user/contacts/contacts.vue'
+import createRepair from '../page/user/createRepair/createRepair.vue'
+import setPassword from '../page/user/setPassword/setPassword.vue'
+import setInfo from '../page/user/setInfo/setInfo.vue'
+import register from '../page/user/registerWork/registerWork.vue'
+import editAN from '../page/user/editAN/editAN.vue'
+import resRegister from '../page/user/resRegister/resRegister.vue'
+import newTask from '../page/user/newTask/newTask.vue'
+import todayFinish from '../page/user/todayFinish/todayFinish.vue'
+import searchToday from '../page/user/searchToday/searchToday.vue'
+import searchUser from '../page/user/searchUser/searchUser.vue'
+import searchID from '../page/user/searchID/searchID.vue'
+import searchDay from '../page/user/searchDay/searchDay.vue'
+import searchOverview from '../page/user/searchOverview/searchOverview.vue'
+import searchWork from '../page/user/searchWork/searchWork.vue'
+import searchExp from '../page/user/searchExp/searchExp.vue'
+import addExp from '../page/user/addExp/addExp.vue'
 // import os from 'components/os'
-import tasks from 'components/users/tasks'
+import tasks from '../page/user/tasks/tasks.vue'
 
 Vue.use(Router)
 
@@ -84,12 +84,12 @@ export default new Router({
         {
           path: 'editan',
           name: 'editan',
-          component: editan
+          component: editAN
         },
         {
           path: 'resregister',
           name: 'resregister',
-          component: resregister
+          component: resRegister
         },
         {
           path: 'newtask',

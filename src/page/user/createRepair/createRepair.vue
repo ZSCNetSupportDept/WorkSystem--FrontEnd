@@ -72,11 +72,11 @@
 
 <script>
   import {mapState} from 'vuex'
-  import textInput from '../views/textInput.vue'
-  import checkBoxGroup from '../views/checkBoxGroup.vue'
-  import checkBox from '../views/checkBox.vue'
-  import selectBox from '../views/selectBox.vue'
-  import buttons from '../views/button.vue'
+  import textInput from '../../../components/textInput.vue'
+  import checkBoxGroup from '../../../components/checkBoxGroup.vue'
+  import checkBox from '../../../components/checkBox.vue'
+  import selectBox from '../../../components/selectBox.vue'
+  import buttons from '../../../components/button.vue'
 
   export default {
     components: {

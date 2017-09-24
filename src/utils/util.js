@@ -1,12 +1,12 @@
 /**
- * Created by wenxiaoxin on 2017/4/13.
+ * Created by Clovin on 2017/4/13.
  */
 
 /*
  *  get cookie value
  *
  *  @params   {string}name
- *  @returns  {string}cookieValue
+ *  @returns  {string?}cookieValue
  **/
 export function getCookie (name) {
   let cookieName = encodeURIComponent(name) + '='

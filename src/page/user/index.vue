@@ -123,7 +123,7 @@
       </ul>
     </nav>
 
-    <section class="main">
+    <div class="main">
       <header>
         <div @click="openNav" class="menu-btn">
           <span></span>
@@ -133,7 +133,7 @@
       <router-view class="child-view"></router-view>
 
       <shadows :isshadow="isShadow" :click="closeAll"></shadows>
-    </section><!-- / main -->
+    </div><!-- / main -->
 
     <loading :loading="loading"></loading>
 
@@ -155,8 +155,8 @@
 
 <script>
   import {mapState} from 'vuex'
-  import loading from './views/loading.vue'
-  import shadows from './views/shadow.vue'
+  import loading from '../../components/loading.vue'
+  import shadows from '../../components/shadow.vue'
 
   export default {
     components: {
@@ -229,10 +229,14 @@
 
 <style scoped>
   .home {
-    position: relative;
-    width: 100%;
-    height: 100%;
+    /*position: relative;*/
+    /*width: 100%;*/
+    /*height: 100%;*/
+    /*position: fixed;*/
+    /*top: 0;*/
+    /*left: 0;*/
     background-color: #f9f9f9;
+    /*overflow-y: visible;*/
   }
 
   nav {
@@ -243,7 +247,7 @@
     text-align: left;
     background-color: #2e353e;
     transition: all .3s linear;
-    overflow-y: auto;
+    overflow-y: scroll;
     z-index: 3;
   }
 
@@ -322,10 +326,11 @@
   }
 
   .main {
-    height: 100%;
+    min-height: 100vh;
     text-align: left;
-    overflow-y: auto;
+    /*overflow-y: auto;*/
     transition: all .3s linear;
+    overflow-y: visible;
   }
 
   div.home.active .main {
@@ -334,11 +339,14 @@
 
   .main header {
     position: fixed;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 3rem;
     padding: 1rem 1.5rem;
     color: #fff;
     background-color: #0079b7;
+    overflow-y: scroll;
     z-index: 1;
   }
 
@@ -386,6 +394,7 @@
 
   .child-view {
     margin-top: 3.5rem;
+    -webkit-overflow-scrolling: touch;
   }
 
   @media (min-width: 1024px) {
