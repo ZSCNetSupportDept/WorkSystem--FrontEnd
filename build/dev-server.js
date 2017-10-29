@@ -1217,7 +1217,16 @@ app.post('/work/inquire/', function (req, res) {
 })
 
 app.get('/work/extra_work_view/', function (req, res) {
-  res.json({'states': 0, 'success': 'success', 'registerDay': '2017-08-15:16.30'})
+  res.json({
+    'extra_work': [{
+      'work_number': '1547',
+      'status': 0,
+      'add_time': '2017-10-28T07:52:02.099',
+      'extra_work_time': '2017-10-28:16.30',
+      'name': '\u6587\u6653\u65b0',
+      'id': 127
+    }], 'success': 'success'
+  })
 })
 app.get('/work/personal_extra_work_view/', function (req, res) {
   res.json({
@@ -1369,6 +1378,25 @@ app.get('/work/experience_view/', function (req, res) {
       }
     ],
     'success': 'success'
+  })
+})
+
+app.post('/work/change_announcement/', function (req, res) {
+  res.json({
+    'content': 'test',
+    'success': 'success'
+  })
+})
+
+app.post('/work/personal_change/', function (req, res) {
+  res.json({
+    'success': 'change success'
+  })
+})
+
+app.post('/work/password_change/', function (req, res) {
+  res.json({
+    'success': 'change success'
   })
 })
 

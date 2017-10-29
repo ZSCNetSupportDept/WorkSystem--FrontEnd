@@ -88,7 +88,10 @@
             <li>
               <router-link :to="{ name:'contacts'}" @click.native="closeAll">常用联系电话</router-link>
             </li>
-            <li><a href="http://util.sola.love/yue" target="_blank" @click="closeAll">宽带余额查询</a></li>
+            <li>
+              <a href="http://util.sola.love/yue" target="_blank" @click="closeAll">宽带余额查询</a>
+              <!--<router-link :to="{ name:'searchaccount'}" @click.native="closeAll">宽带余额查询</router-link>-->
+            </li>
             <li><a href="http://wiki.sola.love" target="_blank" @click="closeAll">网维wiki</a></li>
           </ul>
         </li>

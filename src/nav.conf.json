@@ -1,0 +1,153 @@
+[
+  {
+    "pathName": "creatework",
+    "name": "签到"
+  },
+  {
+    "title": "权限",
+    "list": [
+      {
+        "pathName": "newtask",
+        "name": "新增任务"
+      },
+      {
+        "pathName": "searchwork",
+        "name": "查询签到情况"
+      },
+      {
+        "pathName": "searchoverview",
+        "name": "查询报修概览"
+      },
+      {
+        "pathName": "searchuser",
+        "name": "查询用户"
+      },
+      {
+        "pathName": "searchid",
+        "name": "查询工号"
+      },
+      {
+        "pathName": "searchday",
+        "name": "查询报修单"
+      },
+      {
+        "pathName": "resregister",
+        "name": "蹭班审核"
+      },
+      {
+        "pathName": "editan",
+        "name": "编辑公告"
+      }
+    ]
+  },
+  {
+    "pathName": "createrepair",
+    "name": "完成纸质报修"
+  },
+  {
+    "title": "任务",
+    "list": [
+      {
+        "pathName": "tasks",
+        "params": {
+          "isp": "投诉"
+        },
+        "name": "投诉任务"
+      },
+      {
+        "pathName": "tasks",
+        "params": {
+          "isp": "普通"
+        },
+        "name": "普通任务"
+      },
+      {
+        "pathName": "tasks",
+        "params": {
+          "isp": "中国电信"
+        },
+        "name": "电信任务"
+      },
+      {
+        "pathName": "tasks",
+        "params": {
+          "isp": "中国移动"
+        },
+        "name": "移动任务"
+      },
+      {
+        "pathName": "tasks",
+        "params": {
+          "isp": "中国联通"
+        },
+        "name": "联通任务"
+      }
+    ]
+  },
+  {
+    "title": "查询",
+    "list": [
+      {
+        "pathName": "todayfinish",
+        "name": "今日完成情况"
+      },
+      {
+        "pathName": "searchtoday",
+        "name": "查询各片区任务"
+      }
+    ]
+  },
+  {
+    "pathName": "overview",
+    "name": "概览"
+  },
+  {
+    "title": "工具",
+    "list": [
+      {
+        "pathName": "contacts",
+        "name": "常用联系电话"
+      },
+      {
+        "path": "http://util.sola.love/yue",
+        "name": "宽带余额查询",
+        "target": "_blank"
+      },
+      {
+        "path": "http://wiki.sola.love",
+        "name": "网维wiki",
+        "target": "_blank"
+      }
+    ]
+  },
+  {
+    "title": "经验",
+    "list": [
+      {
+        "pathName": "searchexp",
+        "name": "经验概览"
+      },
+      {
+        "pathName": "addexp",
+        "name": "添加经验"
+      }
+    ]
+  },
+  {
+    "pathName": "register",
+    "name": "蹭班申请"
+  },
+  {
+    "title": "个人中心",
+    "list": [
+      {
+        "pathName": "setinfo",
+        "name": "修改个人资料"
+      },
+      {
+        "pathName": "setpassword",
+        "name": "修改密码"
+      }
+    ]
+  }
+]

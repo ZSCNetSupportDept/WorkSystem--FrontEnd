@@ -1,7 +1,7 @@
 /**
  * Created by Clovin on 2017/8/21.
  */
-import {getCookie} from '../utils/util.js'
+import {getCookie} from '../utils'
 
 /*
  *  post data for login

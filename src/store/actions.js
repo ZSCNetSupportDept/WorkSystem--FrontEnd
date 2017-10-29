@@ -9,9 +9,7 @@ import {
   fetchExtraWork,
   fetchPersonToday,
   fetchLogout,
-  fetchPersonExtraWork
-} from '../api/fetch_data'
-import {
+  fetchPersonExtraWork,
   postLogin,
   postAddExp,
   postEditAN,
@@ -24,7 +22,7 @@ import {
   postSearchToday,
   postAddTask,
   postCheckWork
-} from '../api/post_data'
+} from '../api'
 
 export default {
   FETCH_IS_LOGIN ({commit, dispatch}) {
@@ -174,7 +172,6 @@ export default {
     dispatch('beginLoading')
 
     return postLogin(postData.token, postData.data).then(data => {
-      console.log(data.error)
       if (data.error === 'username&password error') {
         return {error: '账号或密码错误'}
       }

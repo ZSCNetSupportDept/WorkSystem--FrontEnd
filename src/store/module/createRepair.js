@@ -15,9 +15,6 @@ let state = {
 }
 
 const mutations = {
-  // [types.SET_REPAIR] (state, value) {
-  //   state.repair = value
-  // },
   [types.SET_REPAIR_STATUS] (state, status) {
     state.repairStatus = status
   },
@@ -42,9 +39,6 @@ const mutations = {
   [types.SET_REPAIR_WORKERS] (state, workers) {
     state.repairWorkers = workers
   }
-  // [types.SET_REPAIR] (state, repair) {
-  //   state.repair = repair
-  // }
 }
 
 export default {

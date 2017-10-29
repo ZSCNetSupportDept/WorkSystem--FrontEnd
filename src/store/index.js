@@ -11,7 +11,6 @@ import createRepair from './module/createRepair'
 import overview from './module/overview'
 import tasks from './module/tasks'
 import newTask from './module/newTask'
-import todayFinish from './module/todayFinish'
 
 Vue.use(Vuex)
 
@@ -27,8 +26,7 @@ export default new Vuex.Store({
     createRepair,
     overview,
     tasks,
-    newTask,
-    todayFinish
+    newTask
   },
   strict: debug
 })

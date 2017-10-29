@@ -87,7 +87,7 @@ export function fetchExtraWork () {
 /*
  *  fetch person's extra work
  *
- *
+ *  @returns Promise(dataJSON)
  **/
 export function fetchPersonExtraWork () {
   return fetch('work/personal_extra_work_view/', {

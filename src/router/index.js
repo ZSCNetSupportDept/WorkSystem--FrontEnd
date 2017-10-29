@@ -23,6 +23,7 @@ import searchExp from '../page/user/searchExp/searchExp.vue'
 import addExp from '../page/user/addExp/addExp.vue'
 // import os from 'components/os'
 import tasks from '../page/user/tasks/tasks.vue'
+// import searchAccount from '../page/user/searchAccount/searchAccount.vue'
 
 Vue.use(Router)
 
@@ -146,6 +147,11 @@ export default new Router({
           name: 'tasks',
           component: tasks
         },
+        // {
+        //   path: 'searchAccount',
+        //   name: 'searchaccount',
+        //   component: searchAccount
+        // },
         {
           path: '*',
           component: overview
