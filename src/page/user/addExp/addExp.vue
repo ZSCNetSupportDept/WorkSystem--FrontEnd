@@ -1,12 +1,14 @@
 <template>
-  <div class="detail add-exp">
-    <div class="detail__content">
-      <cv-text-input v-model="ExpTitle" type="text" placeholder="标题"></cv-text-input>
-      <cv-text-input v-model="Exp" type="text" placeholder="内容"></cv-text-input>
+  <div class="add-exp">
+    <div class="detail">
+      <div class="detail__content">
+        <cv-text-input v-model="ExpTitle" type="text" placeholder="标题"></cv-text-input>
+        <cv-text-input v-model="Exp" type="text" placeholder="内容"></cv-text-input>
 
-      <cv-button label="提交" :click="submit"></cv-button>
-    </div><!-- / detail__content -->
-  </div><!-- / detail -->
+        <cv-button label="提交" :click="submit"></cv-button>
+      </div><!-- / detail__content -->
+    </div><!-- / detail -->
+  </div><!-- / add-exp -->
 </template>
 
 <script>
@@ -52,5 +54,11 @@
 </script>
 
 <style scoped>
+  .cv-text-input {
+    margin-bottom: 5px;
+  }
 
+  .cv-button {
+    width: 100%;
+  }
 </style>

@@ -1,16 +1,8 @@
 <template>
-  <div class="cv-select" :class="{ 'cv-select--disabled': disabled, 'cv-select--selecting': isSelecting }">
-    <input type="text" autocomplete="off" readonly="readonly" :value="select" class="cv-select__input"
-           @click="toggleList">
-    <div class="cv-select-dropdown__wrap">
-      <ul class="cv-select-dropdown__list">
-        <li v-for="option in options" class="cv-select-dropdown__item"
-            :class="{ 'cv-select-dropdown__item--select': option === select,
-                      'cv-select-dropdown__item--disabled': disabledOptions.indexOf(option) !== -1 }"
-            @click="onClick(option)">{{ option }}
-        </li>
-      </ul>
-    </div>
+  <div class="cv-select" :class="{ 'cv-select--disabled': disabled }">
+    <select v-model="select" v-on:change="onCheck" :disabled="disabled">
+      <option v-for="option in options" :disabled="disabledOptions.indexOf(option) !== -1">{{ option }}</option>
+    </select>
   </div>
 </template>
 
@@ -40,8 +32,7 @@
     },
     data () {
       return {
-        select: '',
-        isSelecting: false
+        select: ''
       }
     },
     watch: {
@@ -50,19 +41,8 @@
       }
     },
     methods: {
-      onClick (option) {
-        if (this.disabled || this.disabledOptions.indexOf(option) !== -1) {
-          return
-        }
-        this.select = this.select === option ? '' : option
-        this.isSelecting = false
+      onCheck () {
         this.$emit('input', this.select)
-      },
-      toggleList () {
-        if (this.disabled) {
-          return
-        }
-        this.isSelecting = !this.isSelecting
       }
     }
   }

@@ -10,12 +10,18 @@
 <script>
   export default {
     name: 'dropSelecter',
-    props: [
-      'options',
-      'default'
-    ],
-    mounted () {
-      this.selected = this.default ? this.options[this.default] : this.options[0]
+    props: {
+      options: {
+        type: Array,
+        require: true
+      },
+      value: {
+        type: String,
+        require: true
+      }
+    },
+    beforeMount () {
+      this.selected = this.value
     },
     data () {
       return {

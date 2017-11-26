@@ -6,12 +6,13 @@
 
     <div class="form">
       <div class="input">
-        <cv-text-input type="text" placeholder="UserName" v-model="username"></cv-text-input>
-        <cv-text-input type="password" placeholder="PassWord" v-model="password" :haserror="hasError"
-                    :errormsg="errorMsg"></cv-text-input>
+        <cv-text-input class="login-input" type="text" placeholder="UserName" v-model="username"></cv-text-input>
+        <cv-text-input class="login-input" type="password" placeholder="PassWord" v-model="password"
+                       :haserror="hasError"
+                       :errormsg="errorMsg"></cv-text-input>
       </div><!-- / input -->
 
-      <check-box v-model="time" :check="time" label="记住登录"></check-box>
+      <cv-check-box v-model="time" label="记住登录"></cv-check-box>
 
       <a @click="submit" href="javascript:void(0);">LogIn</a>
     </div><!-- / form -->
@@ -125,6 +126,7 @@
     top: -2.5rem;
     width: 80%;
     margin: auto auto;
+    text-align: left;
   }
 
   .login .form .input {
@@ -141,6 +143,11 @@
     padding: .8rem;
     color: #fff;
     background-color: #207ab8;
+    text-align: center;
+  }
+
+  .login-input {
+    margin: 6px auto;
   }
 
 </style>

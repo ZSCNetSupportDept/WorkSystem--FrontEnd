@@ -7,6 +7,7 @@
         <h2>编辑公告</h2>
       </div><!-- / detail__title -->
       <div class="detail__content">
+        <p>公告内容</p>
         <cv-text-input v-model="newAN" type="text"></cv-text-input>
       </div><!-- / detail__content -->
     </div><!-- / detail -->
@@ -58,5 +59,7 @@
 </script>
 
 <style scoped>
-
+  .cv-button {
+    width: 100%;
+  }
 </style>

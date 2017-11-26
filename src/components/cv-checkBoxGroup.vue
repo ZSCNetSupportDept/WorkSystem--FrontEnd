@@ -27,9 +27,6 @@
       disabled: {
         type: Array,
         'default': () => []
-      },
-      label: {
-        type: String
       }
     },
     data () {
@@ -39,8 +36,8 @@
       }
     },
     watch: {
-      value () {
-        this.checked = this.value
+      value (value) {
+        this.checked = value
       }
     },
     methods: {

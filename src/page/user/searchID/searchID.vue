@@ -114,4 +114,7 @@
 </script>
 
 <style scoped>
+  .cv-button {
+    width: 100%;
+  }
 </style>

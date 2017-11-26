@@ -16,9 +16,11 @@
         <h2>用户信息</h2>
       </div><!-- / detail__title -->
       <div class="detail__content">
-        <cv-text-input v-model="userPhone" type="text" label="联系电话" placeholder="电话(必填)"></cv-text-input>
+        <p>联系电话</p>
+        <cv-text-input v-model="userPhone" type="text" placeholder="电话(必填)"></cv-text-input>
 
-        <cv-select v-model="userPlace" :options="placeOptions" label="宿舍" :disabled="true"></cv-select>
+        <p>宿舍</p>
+        <cv-select v-model="userPlace" :options="placeOptions" :disabled="true"></cv-select>
 
         <cv-text-input v-model="userHouse" type="text" placeholder="宿舍号(必填)"></cv-text-input>
       </div><!-- / detail__content -->
@@ -31,7 +33,7 @@
       <div class="detail__content">
         <cv-select v-model="netInfo" :options="netOptions"></cv-select>
 
-        <cv-text-input v-model="netAccount" type="text" placeholder="不需要输入任何前缀后缀"></cv-text-input>
+        <cv-text-input v-model="netAccount" type="text" placeholder="选填,不需要前缀后缀"></cv-text-input>
       </div><!-- / detail__content -->
     </div><!-- / net-info -->
 
@@ -40,14 +42,15 @@
         <h2>维护记录</h2>
       </div><!-- / detail__title -->
       <div class="detail__content">
-        <cv-text-input v-model="repairDetail" type="text" placeholder="必填"></cv-text-input>
-
         <p>维护人员</p>
         <cv-check-box-group v-model="repairWorkers" :options="workers"></cv-check-box-group>
+
+        <p>维修简介</p>
+        <cv-text-input v-model="repairDetail" type="text" placeholder="必填"></cv-text-input>
       </div><!-- / detail__content -->
     </div><!-- / repair-record -->
 
-    <buttons value="创建报修单" :click="verify"></buttons>
+    <cv-button label="创建报修单" :click="verify"></cv-button>
 
     <div class="confirm" :class="{ 'open': isOpen }">
       <div class="detail">
@@ -263,4 +266,9 @@
     margin: .5rem auto;
   }
 
+  .cv-button {
+    width: 100%;
+    padding: .6rem .5rem;
+    margin-bottom: 10px;
+  }
 </style>

@@ -11,13 +11,15 @@
         <p>值班片区</p>
         <cv-select v-model="workPlace" :options="placeOptions"></cv-select>
 
-        <cv-text-input v-model="phone" label="手机号码" type="text"></cv-text-input>
+        <p>手机号码</p>
+        <cv-text-input v-model="phone" type="text"></cv-text-input>
 
-        <cv-text-input v-model="workPhone" label="工作号码" type="text"></cv-text-input>
+        <p>工作号码</p>
+        <cv-text-input v-model="workPhone" type="text"></cv-text-input>
       </div><!-- / detail__content -->
     </div><!-- / detail -->
 
-    <cv-button value="提交修改" :click="submit"></cv-button>
+    <cv-button label="提交修改" :click="submit"></cv-button>
   </div><!-- / setinfo -->
 </template>
 
@@ -65,5 +67,7 @@
 </script>
 
 <style scoped>
-
+  .cv-button {
+    width: 100%;
+  }
 </style>

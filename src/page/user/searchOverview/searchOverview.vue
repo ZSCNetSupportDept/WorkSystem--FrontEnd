@@ -84,4 +84,8 @@
   .day-detail.active {
     opacity: 1;
   }
+
+  .cv-button {
+    width: 100%;
+  }
 </style>

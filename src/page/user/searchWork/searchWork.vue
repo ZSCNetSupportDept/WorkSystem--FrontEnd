@@ -77,4 +77,8 @@
   .day-detail .detail__content {
     border-bottom: 1px solid #f1f1f1;
   }
+
+  .cv-button {
+    width: 100%;
+  }
 </style>

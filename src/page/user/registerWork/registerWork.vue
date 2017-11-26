@@ -28,10 +28,11 @@
           <h2>蹭班申请</h2>
         </div><!-- / detail__title -->
         <div class="detail__content">
-          <select-box v-model="registerDay" :options="dayOptions" label="蹭班日期"></select-box>
+          <p>蹭班日期</p>
+          <cv-select v-model="registerDay" :options="dayOptions"></cv-select>
         </div><!-- / detail__content -->
 
-        <buttons value="提交申请" :click="submit"></buttons>
+        <cv-button label="提交申请" :click="submit"></cv-button>
       </div><!-- / detail -->
     </div><!-- / 申请通过 -->
 
@@ -50,10 +51,11 @@
           <h2>蹭班申请</h2>
         </div><!-- / detail__title -->
         <div class="detail__content">
-          <select-box v-model="registerDay" :options="dayOptions" label="蹭班日期"></select-box>
+          <p>蹭班日期</p>
+          <cv-select v-model="registerDay" :options="dayOptions"></cv-select>
         </div><!-- / detail__content -->
 
-        <buttons value="提交申请" :click="submit"></buttons>
+        <cv-button label="提交申请" :click="submit"></cv-button>
       </div><!-- / detail -->
     </div><!-- / 申请未通过 -->
 
@@ -151,5 +153,7 @@
 </script>
 
 <style scoped>
-
+  .cv-button {
+    width: 100%;
+  }
 </style>

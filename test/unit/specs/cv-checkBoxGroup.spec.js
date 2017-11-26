@@ -11,8 +11,7 @@ describe('components/cv-checkBoxGroup.vue', () => {
     vm = createTest(cvCheckBoxGroup, {
       options: ['test1', 'test2', 'test3'],
       value: ['test1'],
-      disabled: ['test2'],
-      label: 'test'
+      disabled: ['test2']
     })
 
     const input = vm.$el.querySelectorAll('input')
@@ -20,7 +19,6 @@ describe('components/cv-checkBoxGroup.vue', () => {
     const p = vm.$el.querySelector('p')
 
     expect(vm.$data.checked, 'checked status error').has.same.members(['test1'])
-    expect(p.textContent, 'label text error').is.equal('test')
     expect(vm.$data.id, 'id create error').is.a('string')
     expect(input[0].id, 'first input id error').have.string('test1')
     expect(input[1].id, 'second input id error').have.string('test2')

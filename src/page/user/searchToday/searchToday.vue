@@ -5,6 +5,7 @@
         <h2>查询条件</h2>
       </div><!-- / detail__title -->
       <div class="detail__content">
+        <p>查询片区</p>
         <cv-select v-model="choosePlace" :options="placeOptions"></cv-select>
 
         <cv-button label="查询" :click="submit"></cv-button>
@@ -62,5 +63,11 @@
 
   .record p {
     margin: .2rem !important;
+  }
+
+  .cv-button {
+    width: 100%;
+    padding: .6rem .5rem;
+    margin-bottom: 10px;
   }
 </style>

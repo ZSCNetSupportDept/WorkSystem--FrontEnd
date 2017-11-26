@@ -5,7 +5,8 @@
         <h2>查询条件</h2>
       </div><!-- / detail__title -->
       <div class="detail__content">
-        <cv-text-input v-model="userPhone" type="text" label="用户联系电话" placeholder="联系电话"></cv-text-input>
+        <p>用户联系电话</p>
+        <cv-text-input v-model="userPhone" type="text" placeholder="联系电话"></cv-text-input>
 
         <cv-button label="查询" :click="submit"></cv-button>
       </div><!-- / detail__content -->
@@ -104,5 +105,10 @@
 
   .record p {
     margin: .2rem !important;
+  }
+
+  .cv-button {
+    width: 100%;
+    margin-top: 10px;
   }
 </style>

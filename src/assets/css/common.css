@@ -8,6 +8,10 @@ input, select, textarea, button {
   -webkit-appearance: none;
 }
 
+p {
+  margin: 3px auto;
+}
+
 ::-webkit-scrollbar {
   display: none;
 }
@@ -22,13 +26,13 @@ input, select, textarea, button {
 }
 
 .detail__title {
-  padding: .7rem 1rem;
+  padding: .7rem .7rem;
   border-bottom: 1px solid #f1f1f1;
   background-color: #fff;
 }
 
 .detail__content {
-  padding: 1rem 1rem;
+  padding: .8rem .7rem;
   background-color: #fefefe;
 }
 
@@ -44,7 +48,7 @@ input, select, textarea, button {
   left: 50%;
   width: 100%;
   transform: translate(-50%, -50%);
-  z-index: 3;
+  z-index: 200;
 }
 
 .confirm.open {

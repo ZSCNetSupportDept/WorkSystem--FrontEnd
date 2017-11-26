@@ -21,7 +21,8 @@
       <div class="detail__content">
         <cv-check-box-group :options="nowTools" v-model="toolKit"></cv-check-box-group>
 
-        <cv-text-input type="text" v-model="toolsDetail" placeholder="None" label="备注"></cv-text-input>
+        <p>备注</p>
+        <cv-text-input type="text" v-model="toolsDetail" placeholder="None"></cv-text-input>
       </div><!-- / detail__content -->
     </div><!-- / check-tools -->
 
@@ -101,7 +102,7 @@
       },
       toolKit: {
         get () {
-          return this.$store.state.createWork.toolKit
+          return Array.from(this.$store.state.createWork.toolKit)
         },
         set (value) {
           this.$store.dispatch('updateToolKit', value)
@@ -152,8 +153,6 @@
         if (this.isWorked) {
           // 签退
           this.$store.dispatch('FETCH_ALL_TASKS').then(data => {
-            console.log(data)
-
             data.general.work_order.map(task => {
               if (task.repairStatus === 0 || (task.repairStatus === 2 &&
                   (new Date()).getTime() - (new Date(task.lastChangeTime)).getTime() <= 3600000 * 4)) {
@@ -220,7 +219,7 @@
           this.$router.push({name: 'searchtoday'})
         } else {
           // 签退的情况
-          this.$router.push({name: 'fucktasks'})
+          this.$router.push({name: 'tasks', params: {isp: '投诉'}})
         }
 
         this.$store.dispatch('closeSth')
@@ -234,13 +233,21 @@
 
   .check-tools {
     max-height: 0;
+    margin: 0;
     transition: max-height .5s linear;
     overflow: hidden;
   }
 
   .check-tools.active {
+    margin: 1rem .5rem;
     transition: max-height 1s linear;
     max-height: 50rem;
+  }
+
+  .cv-button {
+    width: 100%;
+    padding: .6rem .5rem;
+    margin-bottom: 10px;
   }
 
 </style>

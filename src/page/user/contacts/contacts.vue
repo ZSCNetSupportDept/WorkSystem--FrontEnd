@@ -33,36 +33,40 @@
             <td>13318271848</td>
           </tr>
           <tr>
-            <td>科长王广鹏</td>
+            <td>科长姜子麒</td>
             <td>18928187471</td>
           </tr>
           <tr>
-            <td>周一麦晓达</td>
-            <td>18928187466</td>
-          </tr>
-          <tr>
-            <td>周二刘越</td>
-            <td>18928187469</td>
-          </tr>
-          <tr>
-            <td>周三许佳培</td>
+            <td>监察组长郑灿彬</td>
             <td>18928187459</td>
           </tr>
           <tr>
-            <td>周四朱宇超</td>
-            <td>18928187463</td>
+            <td>周一黄致杰</td>
+            <td>18928187469</td>
+          </tr>
+          <tr>
+            <td>周二刘越</td>
+            <td>18928187455</td>
+          </tr>
+          <tr>
+            <td>周三麦晓达</td>
+            <td>18928187450</td>
+          </tr>
+          <tr>
+            <td>周四陈坚荣</td>
+            <td>18928187485</td>
           </tr>
           <tr>
             <td>周五周文娣</td>
             <td>18928187460</td>
           </tr>
           <tr>
-            <td>周六叶江南</td>
-            <td>18928187450</td>
+            <td>周六吴李根</td>
+            <td>18928187466</td>
           </tr>
           <tr>
-            <td>周日曾家兴</td>
-            <td>18928187455</td>
+            <td>周日朱宇超</td>
+            <td>18928187463</td>
           </tr>
           </tbody>
         </table>
@@ -93,6 +97,7 @@
   .contacts td {
     padding: 0.825rem;
     border: .15rem solid #fefefe;
+    white-space:nowrap;
   }
 
   .contacts tr:nth-of-type(odd) {

@@ -23,7 +23,8 @@
         <h2>用户信息</h2>
       </div><!-- / detail__title -->
       <div class="detail__content">
-        <cv-text-input v-model="userPhone" type="text" label="联系电话" placeholder="电话(必填)"></cv-text-input>
+        <p>联系电话</p>
+        <cv-text-input v-model="userPhone" type="text" placeholder="电话(必填)"></cv-text-input>
 
         <p>宿舍</p>
         <cv-select v-model="userPlace" :options="placeOptions"></cv-select>
@@ -37,9 +38,11 @@
         <h2>宽带信息</h2>
       </div><!-- / detail__title -->
       <div class="detail__content">
+        <p>运营商</p>
         <cv-select v-model="netInfo" :options="netOptions"></cv-select>
 
-        <cv-text-input v-model="netAccount" type="text" placeholder="不需要输入任何前缀后缀"></cv-text-input>
+        <p>宽带账号</p>
+        <cv-text-input v-model="netAccount" type="text" placeholder="选填,不需要前缀后缀"></cv-text-input>
       </div><!-- / detail__content -->
     </div><!-- / net-info -->
 
@@ -78,7 +81,7 @@
 <script>
   import cvTextInput from '@/components/cv-textInput.vue'
   import cvCheckBox from '@/components/cv-checkBox.vue'
-  import cvSelect from '@/components/cv-selectBox.vue'
+  import cvSelect from '@/components/cv-select.vue'
   import cvButton from '@/components/cv-button.vue'
   import {mapState} from 'vuex'
 
@@ -253,5 +256,7 @@
 </script>
 
 <style scoped>
-
+  .cv-button {
+    width: 100%;
+  }
 </style>

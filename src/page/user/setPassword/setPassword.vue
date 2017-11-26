@@ -1,15 +1,18 @@
 <template>
   <div class="setpassword">
     <div class="detail">
-      <div class="detail-title">
+      <div class="detail__title">
         <h2>修改密码</h2>
       </div><!-- / detail-title -->
-      <div class="detail-content">
-        <cv-text-input v-model="oldPassword" label="旧密码" type="password"></cv-text-input>
+      <div class="detail__content">
+        <p>旧密码</p>
+        <cv-text-input v-model="oldPassword" type="password"></cv-text-input>
 
-        <cv-text-input v-model="newPassword" label="新密码" type="password"></cv-text-input>
+        <p>新密码</p>
+        <cv-text-input v-model="newPassword" type="password"></cv-text-input>
 
-        <cv-text-input v-model="confirm" label="确认密码" type="password"></cv-text-input>
+        <p>确认密码</p>
+        <cv-text-input v-model="confirm" type="password"></cv-text-input>
       </div><!-- / detail-content -->
     </div><!-- / detail -->
 
@@ -59,5 +62,7 @@
 </script>
 
 <style scoped>
-
+  .cv-button {
+    width: 100%;
+  }
 </style>

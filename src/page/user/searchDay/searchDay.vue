@@ -56,6 +56,7 @@
 
   export default {
     components: {
+      task,
       cvSelect,
       cvButton
     },
@@ -70,7 +71,7 @@
         endDate: new Date().getFullYear() + '-' +
         (new Date().getMonth() + 1 < 10 ? '0' + (new Date().getMonth() + 1) : new Date().getMonth() + 1) + '-' +
         (new Date().getDate() < 10 ? '0' : '') + new Date().getDate(),
-        type: ''
+        type: '全部'
       }
     },
     computed: {
@@ -111,5 +112,7 @@
 </script>
 
 <style scoped>
-
+  .cv-button {
+    width: 100%;
+  }
 </style>

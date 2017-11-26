@@ -22,7 +22,7 @@ const mutations = {
   },
   [types.UPDATE_TOOL_KIT] (state, tools) {
     state.toolKit.splice(0, state.toolKit.length)
-    tools.forEach((tool) => {
+    tools.forEach(tool => {
       state.toolKit.push(tool)
     })
   }

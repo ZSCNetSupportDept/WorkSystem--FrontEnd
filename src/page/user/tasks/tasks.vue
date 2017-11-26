@@ -3,16 +3,16 @@
     <div class="tag">
       <ul>
         <li>
-          <cv-select v-model="sortStatus" :options="sortStatusOptions"></cv-select>
+          <drop-selecter v-model="sortStatus" :options="sortStatusOptions"></drop-selecter>
         </li>
         <li>
-          <cv-select v-model="sortProperty" :options="sortPropertyOptions"></cv-select>
+          <drop-selecter v-model="sortProperty" :options="sortPropertyOptions"></drop-selecter>
         </li>
         <li>
-          <cv-select v-model="sortDorm" :options="sortDormOptions"></cv-select>
+          <drop-selecter v-model="sortDorm" :options="sortDormOptions"></drop-selecter>
         </li>
         <li>
-          <cv-select v-model="sortShowDelay" :options="sortShowDelayOptions"></cv-select>
+          <drop-selecter v-model="sortShowDelay" :options="sortShowDelayOptions"></drop-selecter>
         </li>
       </ul>
     </div><!-- / tag-btn -->
@@ -31,10 +31,11 @@
           <p>维修状态</p>
           <cv-select v-model="repairStatus" :options="statusOptions"></cv-select>
 
-          <cv-text-input v-model="repairDetail" type="text" placeholder="None" label="维修简介"></cv-text-input>
-
           <p>维护人员</p>
           <cv-check-box-group v-model="repairWorkers" :options="workers"></cv-check-box-group>
+
+          <p>维修简介</p>
+          <cv-text-input v-model="repairDetail" type="text" placeholder="None"></cv-text-input>
 
           <cv-button label="提交修改" :click="submit"></cv-button>
         </div><!-- / detail__content -->
@@ -51,6 +52,7 @@
   import cvCheckBox from '@/components/cv-checkBox.vue'
   import cvSelect from '@/components/cv-select.vue'
   import cvButton from '@/components/cv-button.vue'
+  import dropSelecter from '@/components/dropSelecter.vue'
 
   export default {
     components: {
@@ -59,7 +61,8 @@
       cvCheckBoxGroup,
       cvCheckBox,
       cvSelect,
-      cvButton
+      cvButton,
+      dropSelecter
     },
     mounted () {
       if (!this.isWorked) {
@@ -247,6 +250,14 @@
 
   .tasks-list {
     padding-top: 1rem;
+  }
+
+  .cv-button {
+    width: 100%;
+  }
+
+  .cv-text-input {
+    margin-bottom: 10px;
   }
 
 </style>

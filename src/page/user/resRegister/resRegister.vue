@@ -15,7 +15,7 @@
         <div class="detail__content">
           <cv-check-box v-model="resPass" label="是否通过"></cv-check-box>
 
-          <p>分配片区</p>
+          <p v-if="resPass">分配片区</p>
           <cv-select v-if="resPass" v-model="resPlace" :options="placeOptions"></cv-select>
 
           <cv-text-input v-if="!resPass" v-model="resWhy" label="拒绝理由" type="text"></cv-text-input>
@@ -113,5 +113,8 @@
 </script>
 
 <style scoped>
-
+  .cv-button {
+    margin-top: 15px;
+    width: 100%;
+  }
 </style>
