@@ -7,7 +7,7 @@
         <h2>报修状态</h2>
       </div><!-- / detail__title -->
       <div class="detail__content">
-        <select-box v-model="repairStatus" :options="statusOptions"></select-box>
+        <cv-select v-model="repairStatus" :options="statusOptions"></cv-select>
       </div><!-- / detail__content -->
     </div><!-- / repair-status -->
 
@@ -16,12 +16,11 @@
         <h2>用户信息</h2>
       </div><!-- / detail__title -->
       <div class="detail__content">
-        <text-input v-model="userPhone" :data="userPhone" type="text" label="联系电话" placeholder="电话(必填)"></text-input>
+        <cv-text-input v-model="userPhone" type="text" label="联系电话" placeholder="电话(必填)"></cv-text-input>
 
-        <select-box v-model="userPlace" :options="placeOptions" :default="placeOptions.indexOf(userPlace)" label="宿舍"
-                    :disabled="true"></select-box>
+        <cv-select v-model="userPlace" :options="placeOptions" label="宿舍" :disabled="true"></cv-select>
 
-        <text-input v-model="userHouse" :data="userHouse" type="text" placeholder="宿舍号(必填)"></text-input>
+        <cv-text-input v-model="userHouse" type="text" placeholder="宿舍号(必填)"></cv-text-input>
       </div><!-- / detail__content -->
     </div><!-- / user-info -->
 
@@ -30,9 +29,9 @@
         <h2>宽带信息</h2>
       </div><!-- / detail__title -->
       <div class="detail__content">
-        <select-box v-model="netInfo" :options="netOptions"></select-box>
+        <cv-select v-model="netInfo" :options="netOptions"></cv-select>
 
-        <text-input v-model="netAccount" :data="netAccount" type="text" placeholder="不需要输入任何前缀后缀"></text-input>
+        <cv-text-input v-model="netAccount" type="text" placeholder="不需要输入任何前缀后缀"></cv-text-input>
       </div><!-- / detail__content -->
     </div><!-- / net-info -->
 
@@ -41,9 +40,10 @@
         <h2>维护记录</h2>
       </div><!-- / detail__title -->
       <div class="detail__content">
-        <text-input v-model="repairDetail" :data="repairDetail" type="text" placeholder="必填"></text-input>
+        <cv-text-input v-model="repairDetail" type="text" placeholder="必填"></cv-text-input>
 
-        <check-box-group v-model="repairWorkers" :sources="workers" label="维护人员"></check-box-group>
+        <p>维护人员</p>
+        <cv-check-box-group v-model="repairWorkers" :options="workers"></cv-check-box-group>
       </div><!-- / detail__content -->
     </div><!-- / repair-record -->
 
@@ -62,8 +62,8 @@
           <p>运营商：{{ netInfo }}</p>
           <p>宽度账号：{{ netAccount }}</p>
           <p>维修简介：{{ repairDetail }}</p>
-          <buttons value="确认提交" :click="submit"></buttons>
-          <buttons value="进行修改" :click="cancel"></buttons>
+          <cv-button label="确认提交" :click="submit"></cv-button>
+          <cv-button label="进行修改" :click="cancel"></cv-button>
         </div><!-- / detail__content -->
       </div><!-- / detail -->
     </div><!-- / confirm -->
@@ -72,19 +72,19 @@
 
 <script>
   import {mapState} from 'vuex'
-  import textInput from '../../../components/textInput.vue'
-  import checkBoxGroup from '../../../components/checkBoxGroup.vue'
-  import checkBox from '../../../components/checkBox.vue'
-  import selectBox from '../../../components/selectBox.vue'
-  import buttons from '../../../components/button.vue'
+  import cvTextInput from '@/components/cv-textInput.vue'
+  import cvCheckBoxGroup from '@/components/cv-checkBoxGroup.vue'
+  import cvCheckBox from '@/components/cv-checkBox.vue'
+  import cvSelect from '@/components/cv-select.vue'
+  import cvButton from '@/components/cv-button.vue'
 
   export default {
     components: {
-      'textInput': textInput,
-      'checkBoxGroup': checkBoxGroup,
-      'checkBox': checkBox,
-      'selectBox': selectBox,
-      'buttons': buttons
+      cvTextInput,
+      cvCheckBoxGroup,
+      cvCheckBox,
+      cvSelect,
+      cvButton
     },
     mounted () {
       if (!this.isWorked) {

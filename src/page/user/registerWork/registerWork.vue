@@ -6,11 +6,12 @@
           <h2>蹭班申请</h2>
         </div><!-- / detail__title -->
         <div class="detail__content">
-          <select-box v-model="registerDay" :options="dayOptions" label="蹭班日期"></select-box>
+          <p>蹭班日期</p>
+          <cv-select v-model="registerDay" :options="dayOptions"></cv-select>
         </div><!-- / detail__content -->
       </div><!-- / detail -->
 
-      <buttons value="提交申请" :click="submit"></buttons>
+      <cv-button label="提交申请" :click="submit"></cv-button>
     </div><!-- / 未申请 -->
 
     <div v-else-if="registerStatus===1">
@@ -70,13 +71,13 @@
 </template>
 
 <script>
-  import selectBox from '../../../components/selectBox.vue'
-  import buttons from '../../../components/button.vue'
+  import cvSelect from '@/components/cv-select.vue'
+  import cvButton from '@/components/cv-button.vue'
 
   export default {
     components: {
-      'selectBox': selectBox,
-      'buttons': buttons
+      cvSelect,
+      cvButton
     },
     mounted () {
       this.fetchData()

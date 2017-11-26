@@ -11,7 +11,7 @@
         'default': () => {}
       },
       label: {
-        type: [String, Number],
+        type: String,
         required: true
       },
       disabled: {

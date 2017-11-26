@@ -5,26 +5,26 @@
         <h2>修改密码</h2>
       </div><!-- / detail-title -->
       <div class="detail-content">
-        <text-input v-model="oldPassword" label="旧密码" type="password"></text-input>
+        <cv-text-input v-model="oldPassword" label="旧密码" type="password"></cv-text-input>
 
-        <text-input v-model="newPassword" label="新密码" type="password"></text-input>
+        <cv-text-input v-model="newPassword" label="新密码" type="password"></cv-text-input>
 
-        <text-input v-model="confirm" label="确认密码" type="password"></text-input>
+        <cv-text-input v-model="confirm" label="确认密码" type="password"></cv-text-input>
       </div><!-- / detail-content -->
     </div><!-- / detail -->
 
-    <buttons value="提交修改" :click="submit"></buttons>
+    <cv-button label="提交修改" :click="submit"></cv-button>
   </div><!-- / setpassword -->
 </template>
 
 <script>
-  import textInput from '../../../components/textInput.vue'
-  import buttons from '../../../components/button.vue'
+  import cvTextInput from '@/components/cv-textInput.vue'
+  import cvButton from '@/components/cv-button.vue'
 
   export default {
     components: {
-      'textInput': textInput,
-      'buttons': buttons
+      cvTextInput,
+      cvButton
     },
     data () {
       return {

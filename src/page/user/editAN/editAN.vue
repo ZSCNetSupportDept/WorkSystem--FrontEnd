@@ -7,22 +7,22 @@
         <h2>编辑公告</h2>
       </div><!-- / detail__title -->
       <div class="detail__content">
-        <text-input v-model="newAN" type="text"></text-input>
+        <cv-text-input v-model="newAN" type="text"></cv-text-input>
       </div><!-- / detail__content -->
     </div><!-- / detail -->
 
-    <buttons value="提交修改" :click="submit"></buttons>
+    <cv-button label="提交修改" :click="submit"></cv-button>
   </div><!-- / editan -->
 </template>
 
 <script>
-  import textInput from '../../../components/textInput.vue'
-  import buttons from '../../../components/button.vue'
+  import cvTextInput from '@/components/cv-textInput.vue'
+  import cvButton from '@/components/cv-button.vue'
 
   export default {
     components: {
-      'textInput': textInput,
-      'buttons': buttons
+      cvTextInput,
+      cvButton
     },
     data () {
       return {

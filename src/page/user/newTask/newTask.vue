@@ -5,7 +5,7 @@
         <h2>任务性质</h2>
       </div><!-- / detail__title -->
       <div class="detail__content">
-        <select-box v-model="taskProperty" :options="taskOptions"></select-box>
+        <cv-select v-model="taskProperty" :options="taskOptions"></cv-select>
       </div><!-- / detail__content -->
     </div><!-- task-property -->
 
@@ -14,7 +14,7 @@
         <h2>报修状态</h2>
       </div><!-- / detail__title -->
       <div class="detail__content">
-        <select-box v-model="taskStatus" :options="statusOptions"></select-box>
+        <cv-select v-model="taskStatus" :options="statusOptions"></cv-select>
       </div><!-- / detail__content -->
     </div><!-- / repair-status -->
 
@@ -23,11 +23,12 @@
         <h2>用户信息</h2>
       </div><!-- / detail__title -->
       <div class="detail__content">
-        <text-input v-model="userPhone" :data="userPhone" type="text" label="联系电话" placeholder="电话(必填)"></text-input>
+        <cv-text-input v-model="userPhone" type="text" label="联系电话" placeholder="电话(必填)"></cv-text-input>
 
-        <select-box v-model="userPlace" :options="placeOptions" label="宿舍"></select-box>
+        <p>宿舍</p>
+        <cv-select v-model="userPlace" :options="placeOptions"></cv-select>
 
-        <text-input v-model="userHouse" :data="userHouse" type="text" placeholder="宿舍号(必填)"></text-input>
+        <cv-text-input v-model="userHouse" type="text" placeholder="宿舍号(必填)"></cv-text-input>
       </div><!-- / detail__content -->
     </div><!-- / user-info -->
 
@@ -36,9 +37,9 @@
         <h2>宽带信息</h2>
       </div><!-- / detail__title -->
       <div class="detail__content">
-        <select-box v-model="netInfo" :options="netOptions"></select-box>
+        <cv-select v-model="netInfo" :options="netOptions"></cv-select>
 
-        <text-input v-model="netAccount" :data="netAccount" type="text" placeholder="不需要输入任何前缀后缀"></text-input>
+        <cv-text-input v-model="netAccount" type="text" placeholder="不需要输入任何前缀后缀"></cv-text-input>
       </div><!-- / detail__content -->
     </div><!-- / net-info -->
 
@@ -47,11 +48,11 @@
         <h2>任务简述</h2>
       </div><!-- / detail__title -->
       <div class="detail__content">
-        <text-input v-model="introduction" :data="introduction" type="text"></text-input>
+        <cv-text-input v-model="introduction" type="text"></cv-text-input>
       </div><!-- / detail__content -->
     </div><!-- / detail -->
 
-    <buttons value="新增任务" :click="verify"></buttons>
+    <cv-button label="新增任务" :click="verify"></cv-button>
 
     <div class="confirm" :class="{ 'open': isOpen }">
       <div class="detail">
@@ -66,8 +67,8 @@
           <p>运营商：{{ netInfo }}</p>
           <p>宽度账号：{{ netAccount }}</p>
           <p>维修简介：{{ introduction }}</p>
-          <buttons value="确认提交" :click="submit"></buttons>
-          <buttons value="进行修改" :click="cancel"></buttons>
+          <cv-button label="确认提交" :click="submit"></cv-button>
+          <cv-button label="进行修改" :click="cancel"></cv-button>
         </div><!-- / detail__content -->
       </div><!-- / detail -->
     </div><!-- / confirm -->
@@ -75,18 +76,18 @@
 </template>
 
 <script>
-  import textInput from '../../../components/textInput.vue'
-  import checkBox from '../../../components/checkBox.vue'
-  import selectBox from '../../../components/selectBox.vue'
-  import buttons from '../../../components/button.vue'
+  import cvTextInput from '@/components/cv-textInput.vue'
+  import cvCheckBox from '@/components/cv-checkBox.vue'
+  import cvSelect from '@/components/cv-selectBox.vue'
+  import cvButton from '@/components/cv-button.vue'
   import {mapState} from 'vuex'
 
   export default {
     components: {
-      'textInput': textInput,
-      'checkBox': checkBox,
-      'selectBox': selectBox,
-      'buttons': buttons
+      cvTextInput,
+      cvCheckBox,
+      cvSelect,
+      cvButton
     },
     data () {
       return {

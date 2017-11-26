@@ -7,10 +7,10 @@
         <h2>值班信息</h2>
       </div><!-- / detail__title -->
       <div class="detail__content">
-        <select-box v-model="choosePlace" :options="options" label="值班片区" :disabled="isWorked"
-                    :default="options.indexOf(choosePlace)"></select-box>
+        <p>值班片区</p>
+        <cv-select v-model="choosePlace" :options="options" :disabled="isWorked"></cv-select>
 
-        <check-box label="携带工具箱" v-model="hasTools" :check="hasTools"></check-box>
+        <cv-check-box label="携带工具箱" v-model="hasTools"></cv-check-box>
       </div><!-- / detail__content -->
     </div><!-- / work-info -->
 
@@ -19,13 +19,13 @@
         <h2>工具箱</h2>
       </div><!-- / detail__title -->
       <div class="detail__content">
-        <check-box-group :sources="nowTools" v-model="toolKit"></check-box-group>
+        <cv-check-box-group :options="nowTools" v-model="toolKit"></cv-check-box-group>
 
-        <text-input type="text" v-model="toolsDetail" placeholder="None" label="备注"></text-input>
+        <cv-text-input type="text" v-model="toolsDetail" placeholder="None" label="备注"></cv-text-input>
       </div><!-- / detail__content -->
     </div><!-- / check-tools -->
 
-    <buttons :value="isWorked?'结束值班':'开始值班'" :click="submit"></buttons>
+    <cv-button :label="isWorked?'结束值班':'开始值班'" :click="submit"></cv-button>
 
     <div class="confirm" :class="{ 'open': isOpen }">
       <div class="detail">
@@ -33,8 +33,8 @@
           <p v-if="!isWorked">现在不是正常值班时间，你是否确定要签到，还是只是随便浏览一下</p>
           <p v-if="isWorked">尚有未解决状态的任务分类：投诉{{ noWorked.fuck }}单，电信{{ noWorked.dianxin }}单，移动{{ noWorked.yidong
             }}单，联通{{ noWorked.liantong }}单，普通{{ noWorked.general }}单</p>
-          <buttons :value="isWorked?'确认签退':'确认签到'" :click="confirm1"></buttons>
-          <buttons :value="isWorked?'看看任务':'随便看看'" :click="confirm2"></buttons>
+          <cv-button :label="isWorked?'确认签退':'确认签到'" :click="confirm1"></cv-button>
+          <cv-button :label="isWorked?'看看任务':'随便看看'" :click="confirm2"></cv-button>
         </div><!-- / detail__content -->
       </div><!-- / detail -->
     </div><!-- / confirm -->
@@ -42,20 +42,20 @@
 </template>
 
 <script>
-  import textInput from '../../../components/textInput.vue'
-  import checkBoxGroup from '../../../components/checkBoxGroup.vue'
-  import checkBox from '../../../components/checkBox.vue'
-  import selectBox from '../../../components/selectBox.vue'
   import {mapState} from 'vuex'
-  import buttons from '../../../components/button.vue'
+  import cvTextInput from '@/components/cv-textInput.vue'
+  import cvCheckBoxGroup from '@/components/cv-checkBoxGroup.vue'
+  import cvCheckBox from '@/components/cv-checkBox.vue'
+  import cvSelect from '@/components/cv-select.vue'
+  import cvButton from '@/components/cv-button.vue'
 
   export default {
     components: {
-      'textInput': textInput,
-      'checkBoxGroup': checkBoxGroup,
-      'checkBox': checkBox,
-      'selectBox': selectBox,
-      'buttons': buttons
+      cvTextInput,
+      cvCheckBoxGroup,
+      cvCheckBox,
+      cvSelect,
+      cvButton
     },
     data () {
       return {

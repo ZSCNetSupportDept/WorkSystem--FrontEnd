@@ -3,20 +3,16 @@
     <div class="tag">
       <ul>
         <li>
-          <drop-selecter v-model="sortStatus" :options="sortStatusOptions"
-                         :default="sortStatusOptions.indexOf(sortStatus)"></drop-selecter>
+          <cv-select v-model="sortStatus" :options="sortStatusOptions"></cv-select>
         </li>
         <li>
-          <drop-selecter v-model="sortProperty" :options="sortPropertyOptions"
-                         :default="sortPropertyOptions.indexOf(sortProperty)"></drop-selecter>
+          <cv-select v-model="sortProperty" :options="sortPropertyOptions"></cv-select>
         </li>
         <li>
-          <drop-selecter v-model="sortDorm" :options="sortDormOptions"
-                         :default="sortDormOptions.indexOf(sortDorm)"></drop-selecter>
+          <cv-select v-model="sortDorm" :options="sortDormOptions"></cv-select>
         </li>
         <li>
-          <drop-selecter v-model="sortShowDelay" :options="sortShowDelayOptions"
-                         :default="sortShowDelayOptions.indexOf(sortShowDelay)"></drop-selecter>
+          <cv-select v-model="sortShowDelay" :options="sortShowDelayOptions"></cv-select>
         </li>
       </ul>
     </div><!-- / tag-btn -->
@@ -32,15 +28,15 @@
       <div class="detail">
         <div class="detail__title">{{ '#' + currentTask }}</div><!-- / detail__title -->
         <div class="detail__content">
-          <select-box v-model="repairStatus" :default="statusOptions.indexOf(repairStatus)" :options="statusOptions"
-                      label="维修状态"></select-box>
+          <p>维修状态</p>
+          <cv-select v-model="repairStatus" :options="statusOptions"></cv-select>
 
-          <text-input v-model="repairDetail" :data="repairDetail" type="text" placeholder="None"
-                      label="维修简介"></text-input>
+          <cv-text-input v-model="repairDetail" type="text" placeholder="None" label="维修简介"></cv-text-input>
 
-          <check-box-group v-model="repairWorkers" :sources="workers" label="维护人员"></check-box-group>
+          <p>维护人员</p>
+          <cv-check-box-group v-model="repairWorkers" :options="workers"></cv-check-box-group>
 
-          <buttons value="提交修改" :click="submit"></buttons>
+          <cv-button label="提交修改" :click="submit"></cv-button>
         </div><!-- / detail__content -->
       </div><!-- / detail -->
     </div><!-- / watchsth -->
@@ -48,24 +44,22 @@
 </template>
 
 <script>
-  import task from '../../../components/task.vue'
+  import task from '@/components/task.vue'
   import {mapState} from 'vuex'
-  import textInput from '../../../components/textInput.vue'
-  import checkBoxGroup from '../../../components/checkBoxGroup.vue'
-  import checkBox from '../../../components/checkBox.vue'
-  import selectBox from '../../../components/selectBox.vue'
-  import buttons from '../../../components/button.vue'
-  import dropSelecter from '../../../components/dropSelecter.vue'
+  import cvTextInput from '@/components/cv-textInput.vue'
+  import cvCheckBoxGroup from '@/components/cv-checkBoxGroup.vue'
+  import cvCheckBox from '@/components/cv-checkBox.vue'
+  import cvSelect from '@/components/cv-select.vue'
+  import cvButton from '@/components/cv-button.vue'
 
   export default {
     components: {
-      'textInput': textInput,
-      'checkBoxGroup': checkBoxGroup,
-      'checkBox': checkBox,
-      'selectBox': selectBox,
-      'task': task,
-      'buttons': buttons,
-      'dropSelecter': dropSelecter
+      task,
+      cvTextInput,
+      cvCheckBoxGroup,
+      cvCheckBox,
+      cvSelect,
+      cvButton
     },
     mounted () {
       if (!this.isWorked) {

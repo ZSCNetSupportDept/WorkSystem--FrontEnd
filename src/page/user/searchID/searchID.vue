@@ -5,14 +5,14 @@
         <h2>查询条件</h2>
       </div><!-- / detail__title -->
       <div class="detail__content">
-        <text-input v-model="id" type="text" label="工号" placeholder="工号"></text-input>
+        <cv-text-input v-model="id" type="text" label="工号" placeholder="工号"></cv-text-input>
 
         <label for="begin">起始日期</label>
         <input v-model="beginDate" type="date" id="begin">
         <label for="end">结束日期</label>
         <input v-model="endDate" type="date" id="end">
 
-        <buttons value="查询" :click="submit"></buttons>
+        <cv-button label="查询" :click="submit"></cv-button>
       </div><!-- / detail__content -->
     </div><!-- / detail -->
 
@@ -49,16 +49,16 @@
 </template>
 
 <script>
-  import task from '../../../components/task.vue'
-  import textInput from '../../../components/textInput.vue'
+  import task from '@/components/task.vue'
+  import cvTextInput from '@/components/cv-textInput.vue'
   import {mapState} from 'vuex'
-  import buttons from '../../../components/button.vue'
+  import cvButton from '@/components/cv-button.vue'
 
   export default {
     components: {
-      'task': task,
-      'textInput': textInput,
-      'buttons': buttons
+      task,
+      cvTextInput,
+      cvButton
     },
     data () {
       return {

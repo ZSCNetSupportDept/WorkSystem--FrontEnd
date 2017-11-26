@@ -27,6 +27,9 @@
       disabled: {
         type: Array,
         'default': () => []
+      },
+      label: {
+        type: String
       }
     },
     data () {

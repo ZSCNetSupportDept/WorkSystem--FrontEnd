@@ -8,7 +8,7 @@
         <label for="searchdate">查询日期</label>
         <input v-model="searchDate" type="date" id="searchdate">
 
-        <buttons value="查询" :click="submit"></buttons>
+        <cv-button label="查询" :click="submit"></cv-button>
       </div><!-- / detail__content -->
     </div>
 
@@ -37,11 +37,11 @@
 </template>
 
 <script>
-  import buttons from '../../../components/button.vue'
+  import cvButton from '@/components/cv-button.vue'
 
   export default {
     components: {
-      'buttons': buttons
+      cvButton
     },
     data () {
       return {

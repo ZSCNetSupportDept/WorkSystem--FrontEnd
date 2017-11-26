@@ -1,22 +1,22 @@
 <template>
   <div class="detail add-exp">
     <div class="detail__content">
-      <text-input v-model="ExpTitle" type="text" placeholder="标题"></text-input>
-      <text-input v-model="Exp" type="text" placeholder="内容"></text-input>
+      <cv-text-input v-model="ExpTitle" type="text" placeholder="标题"></cv-text-input>
+      <cv-text-input v-model="Exp" type="text" placeholder="内容"></cv-text-input>
 
-      <buttons value="提交" :click="submit"></buttons>
+      <cv-button label="提交" :click="submit"></cv-button>
     </div><!-- / detail__content -->
   </div><!-- / detail -->
 </template>
 
 <script>
-  import textInput from '../../../components/textInput.vue'
-  import buttons from '../../../components/button.vue'
+  import cvTextInput from '@/components/cv-textInput.vue'
+  import cvButton from '@/components/cv-button.vue'
 
   export default {
     components: {
-      'textInput': textInput,
-      'buttons': buttons
+      cvTextInput,
+      cvButton
     },
     data () {
       return {

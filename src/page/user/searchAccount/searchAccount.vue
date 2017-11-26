@@ -5,9 +5,9 @@
         <h2>查询条件</h2>
       </div><!-- / detail__title -->
       <div class="detail__content">
-        <text-input v-model="account" type="text" label="账号" placeholder="账号"></text-input>
+        <cv-text-input v-model="account" type="text" label="账号" placeholder="账号"></cv-text-input>
 
-        <buttons value="查询" :click="submit"></buttons>
+        <cv-button label="查询" :click="submit"></cv-button>
       </div><!-- / detail__content -->
     </div><!-- / detail -->
 
@@ -23,14 +23,14 @@
 </template>
 
 <script>
-  import textInput from '../../../components/textInput.vue'
-  import buttons from '../../../components/button.vue'
+  import cvTextInput from '@/components/cv-textInput.vue'
+  import cvButton from '@/components/cv-button.vue'
 
   export default {
     name: 'search-account',
     components: {
-      'textInput': textInput,
-      'buttons': buttons
+      cvTextInput,
+      cvButton
     },
     data () {
       return {

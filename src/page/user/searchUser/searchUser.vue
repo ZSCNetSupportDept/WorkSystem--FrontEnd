@@ -5,9 +5,9 @@
         <h2>查询条件</h2>
       </div><!-- / detail__title -->
       <div class="detail__content">
-        <text-input v-model="userPhone" type="text" label="用户联系电话" placeholder="联系电话"></text-input>
+        <cv-text-input v-model="userPhone" type="text" label="用户联系电话" placeholder="联系电话"></cv-text-input>
 
-        <buttons value="查询" :click="submit"></buttons>
+        <cv-button label="查询" :click="submit"></cv-button>
       </div><!-- / detail__content -->
     </div><!-- / detail -->
 
@@ -44,16 +44,16 @@
 </template>
 
 <script>
-  import task from '../../../components/task.vue'
-  import textInput from '../../../components/textInput.vue'
-  import buttons from '../../../components/button.vue'
+  import task from '@/components/task.vue'
+  import cvTextInput from '@/components/cv-textInput.vue'
+  import cvButton from '@/components/cv-button.vue'
   import {mapState} from 'vuex'
 
   export default {
     components: {
-      'task': task,
-      'textInput': textInput,
-      'buttons': buttons
+      task,
+      cvTextInput,
+      cvButton
     },
     data () {
       return {

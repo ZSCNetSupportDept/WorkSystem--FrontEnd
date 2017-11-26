@@ -13,13 +13,14 @@
           <h2>{{ currentID + ' ' + currentName}}</h2>
         </div><!-- / detail__title -->
         <div class="detail__content">
-          <check-box v-model="resPass" :check="resPass" label="是否通过"></check-box>
+          <cv-check-box v-model="resPass" label="是否通过"></cv-check-box>
 
-          <select-box v-if="resPass" v-model="resPlace" :options="placeOptions" label="分配片区"></select-box>
+          <p>分配片区</p>
+          <cv-select v-if="resPass" v-model="resPlace" :options="placeOptions"></cv-select>
 
-          <text-input v-if="!resPass" v-model="resWhy" label="拒绝理由" type="text"></text-input>
+          <cv-text-input v-if="!resPass" v-model="resWhy" label="拒绝理由" type="text"></cv-text-input>
 
-          <buttons value="提交" :click="submit"></buttons>
+          <cv-button label="提交" :click="submit"></cv-button>
         </div><!-- / detail__content -->
       </div><!-- / detail -->
     </div><!-- / watchsth -->
@@ -27,18 +28,18 @@
 </template>
 
 <script>
-  import selectBox from '../../../components/selectBox.vue'
-  import checkBox from '../../../components/checkBox.vue'
-  import textInput from '../../../components/textInput.vue'
+  import cvSelect from '@/components/cv-select.vue'
+  import cvCheckBox from '@/components/cv-checkBox.vue'
+  import cvTextInput from '@/components/cv-textInput.vue'
   import {mapState} from 'vuex'
-  import buttons from '../../../components/button.vue'
+  import cvButton from '@/components/cv-button.vue'
 
   export default {
     components: {
-      'selectBox': selectBox,
-      'checkBox': checkBox,
-      'textInput': textInput,
-      'buttons': buttons
+      cvSelect,
+      cvCheckBox,
+      cvTextInput,
+      cvButton
     },
     mounted () {
       this.fetchData()

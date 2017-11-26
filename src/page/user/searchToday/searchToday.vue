@@ -5,9 +5,9 @@
         <h2>查询条件</h2>
       </div><!-- / detail__title -->
       <div class="detail__content">
-        <select-box v-model="choosePlace" :options="placeOptions" :default="0"></select-box>
+        <cv-select v-model="choosePlace" :options="placeOptions"></cv-select>
 
-        <buttons value="查询" :click="submit"></buttons>
+        <cv-button label="查询" :click="submit"></cv-button>
       </div><!-- / detail__title -->
     </div>
 
@@ -18,15 +18,15 @@
 </template>
 
 <script>
-  import task from '../../../components/task.vue'
-  import selectBox from '../../../components/selectBox.vue'
-  import buttons from '../../../components/button.vue'
+  import task from '@/components/task.vue'
+  import cvSelect from '@/components/cv-select.vue'
+  import cvButton from '@/components/cv-button.vue'
 
   export default {
     components: {
-      'task': task,
-      'selectBox': selectBox,
-      'buttons': buttons
+      task,
+      cvSelect,
+      cvButton
     },
     data () {
       return {

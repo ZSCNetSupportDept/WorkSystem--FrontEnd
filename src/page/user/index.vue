@@ -163,8 +163,8 @@
 
   export default {
     components: {
-      'loading': loading,
-      'shadows': shadows
+      loading,
+      shadows
     },
     mounted () {
       this.$store.dispatch('beginLoading')

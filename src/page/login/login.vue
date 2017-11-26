@@ -6,9 +6,9 @@
 
     <div class="form">
       <div class="input">
-        <text-input type="text" placeholder="UserName" v-model="username"></text-input>
-        <text-input type="password" placeholder="PassWord" v-model="password" :haserror="hasError"
-                    :errormsg="errorMsg"></text-input>
+        <cv-text-input type="text" placeholder="UserName" v-model="username"></cv-text-input>
+        <cv-text-input type="password" placeholder="PassWord" v-model="password" :haserror="hasError"
+                    :errormsg="errorMsg"></cv-text-input>
       </div><!-- / input -->
 
       <check-box v-model="time" :check="time" label="记住登录"></check-box>
@@ -21,16 +21,16 @@
 </template>
 
 <script>
-  import textInput from '../../components/textInput.vue'
-  import checkBox from '../../components/checkBox.vue'
-  import loading from '../../components/loading.vue'
+  import cvTextInput from '@/components/cv-textInput.vue'
+  import cvCheckBox from '@/components/cv-checkBox.vue'
+  import loading from '@/components/loading.vue'
   import {mapState} from 'vuex'
 
   export default {
     components: {
-      'textInput': textInput,
-      'loading': loading,
-      'checkBox': checkBox
+      cvTextInput,
+      loading,
+      cvCheckBox
     },
     mounted () {
       if (this.isLog) {

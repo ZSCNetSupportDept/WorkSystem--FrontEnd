@@ -39,7 +39,7 @@
 </template>
 
 <script>
-  import task from '../../../components/task.vue'
+  import task from '@/components/task.vue'
   import {mapState} from 'vuex'
 
   export default {

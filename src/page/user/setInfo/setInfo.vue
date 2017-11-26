@@ -5,30 +5,32 @@
         <h2>修改个人信息</h2>
       </div><!-- / detailt__title -->
       <div class="detail__content">
-        <select-box v-model="workDay" :options="dayOptions" label="工作日"></select-box>
+        <p>工作日</p>
+        <cv-select v-model="workDay" :options="dayOptions"></cv-select>
 
-        <select-box v-model="workPlace" :options="placeOptions" label="值班片区"></select-box>
+        <p>值班片区</p>
+        <cv-select v-model="workPlace" :options="placeOptions"></cv-select>
 
-        <text-input v-model="phone" label="手机号码" type="text"></text-input>
+        <cv-text-input v-model="phone" label="手机号码" type="text"></cv-text-input>
 
-        <text-input v-model="workPhone" label="工作号码" type="text"></text-input>
+        <cv-text-input v-model="workPhone" label="工作号码" type="text"></cv-text-input>
       </div><!-- / detail__content -->
     </div><!-- / detail -->
 
-    <buttons value="提交修改" :click="submit"></buttons>
+    <cv-button value="提交修改" :click="submit"></cv-button>
   </div><!-- / setinfo -->
 </template>
 
 <script>
-  import selectBox from '../../../components/selectBox.vue'
-  import textInput from '../../../components/textInput.vue'
-  import buttons from '../../../components/button.vue'
+  import cvSelect from '@/components/cv-select.vue'
+  import cvTextInput from '@/components/cv-textInput.vue'
+  import cvButton from '@/components/cv-button.vue'
 
   export default {
     components: {
-      'selectBox': selectBox,
-      'textInput': textInput,
-      'buttons': buttons
+      cvSelect,
+      cvTextInput,
+      cvButton
     },
     data () {
       return {

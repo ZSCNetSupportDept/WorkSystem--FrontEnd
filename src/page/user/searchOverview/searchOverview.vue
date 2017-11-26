@@ -10,7 +10,7 @@
         <label for="end">结束日期</label>
         <input v-model="endDate" type="date" id="end">
 
-        <buttons value="查询" :click="submit"></buttons>
+        <cv-button label="查询" :click="submit"></cv-button>
       </div><!-- / detail__content -->
     </div><!-- / detail -->
 
@@ -30,11 +30,11 @@
 </template>
 
 <script>
-  import buttons from '../../../components/button.vue'
+  import cvButton from '@/components/cv-button.vue'
 
   export default {
     components: {
-      'buttons': buttons
+      cvButton
     },
     data () {
       return {
