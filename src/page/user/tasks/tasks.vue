@@ -100,9 +100,6 @@
         tasks: state => state.tasks.tasks,
         workers: state => state.tasks.workers
       }),
-      //      ...mapGetters({
-      //        sortTasks: 'sortTasks'
-      //      }),
       repairDetail: {
         get () {
           return this.$store.state.tasks.repairDetail
@@ -182,9 +179,6 @@
 
         return true
       },
-      closeChanging () {
-        this.$store.dispatch('openSth')
-      },
       changeTask (id) {
         if (id === this.currentTask) {
           this.$store.dispatch('openSth')
@@ -192,9 +186,6 @@
           this.$store.dispatch('changeCurrentTasks', id)
           this.$store.dispatch('openSth')
         }
-      },
-      changeTag (value) {
-        this.currentType = value
       },
       submit () {
         let message = ''

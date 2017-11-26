@@ -6,7 +6,7 @@
       </div><!-- / detail__title -->
       <div class="detail__content">
         <label for="searchdate">查询日期</label>
-        <input v-model="searchDate" type="date" id="searchdate" :value="searchDate">
+        <input v-model="searchDate" type="date" id="searchdate">
 
         <buttons value="查询" :click="submit"></buttons>
       </div><!-- / detail__content -->

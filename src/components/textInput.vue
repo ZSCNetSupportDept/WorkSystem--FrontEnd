@@ -1,4 +1,4 @@
-<template>
+he<template>
   <div>
     <label v-bind:for="text">{{ label }}</label>
     <template v-if="type === 'text'">

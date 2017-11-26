@@ -8,9 +8,9 @@
         <text-input v-model="id" type="text" label="工号" placeholder="工号"></text-input>
 
         <label for="begin">起始日期</label>
-        <input v-model="beginDate" type="date" id="begin" :value="beginDate">
+        <input v-model="beginDate" type="date" id="begin">
         <label for="end">结束日期</label>
-        <input v-model="endDate" type="date" id="end" :value="endDate">
+        <input v-model="endDate" type="date" id="end">
 
         <buttons value="查询" :click="submit"></buttons>
       </div><!-- / detail__content -->
@@ -79,9 +79,6 @@
       })
     },
     methods: {
-      closeChanging () {
-        this.$store.dispatch('closeSth')
-      },
       watchTask (id) {
         this.currentTask = id
         this.$store.dispatch('openSth')

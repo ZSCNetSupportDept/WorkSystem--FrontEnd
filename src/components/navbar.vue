@@ -14,8 +14,8 @@
 </template>
 
 <script>
-  import {mapState} from 'vuex'
-  import NavsConfig from '../nav.conf.json'
+//  import {mapState} from 'vuex'
+  import NavsConfig from '../page/user/nav.conf.json'
 
   //  init the NavsConfig, let it can do more thing
   NavsConfig.map(item => {
@@ -32,7 +32,7 @@
     name: 'navbar',
     data () {
       return {
-        week
+//        week
       }
     },
     computed: {

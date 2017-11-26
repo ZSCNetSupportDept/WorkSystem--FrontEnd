@@ -68,9 +68,6 @@
       })
     },
     methods: {
-      closeChanging () {
-        this.$store.dispatch('closeSth')
-      },
       watchTask (id) {
         this.currentTask = id
         this.$store.dispatch('openSth')

@@ -9,7 +9,9 @@ import {
   fetchExtraWork,
   fetchPersonToday,
   fetchLogout,
-  fetchPersonExtraWork,
+  fetchPersonExtraWork
+} from '../api/fetch_data'
+import {
   postLogin,
   postAddExp,
   postEditAN,
@@ -22,7 +24,7 @@ import {
   postSearchToday,
   postAddTask,
   postCheckWork
-} from '../api'
+} from '../api/post_data'
 
 export default {
   FETCH_IS_LOGIN ({commit, dispatch}) {
@@ -30,11 +32,12 @@ export default {
 
     return fetchIsLogin().then(data => {
       if (data.is_login !== true) {
+        //  if is not login
         dispatch('endLoading')
         return data.csrf_token
       }
 
-      //  set base info
+      //  set base data
       commit(types.SET_INFO, data.user)
       commit(types.SET_ANNOUNCE, data.announcement)
       commit(types.SET_IS_LOG, true)
@@ -60,6 +63,7 @@ export default {
         return
       }
 
+      // sort the task list
       data.work_order.sort((a, b) => {
         let tempA = a.userHouse.split('-')
         let tempB = b.userHouse.split('-')
@@ -91,6 +95,7 @@ export default {
     return fetchTasks(state.base.nowPlace, '普通').then(data => {
       if (data.error) {
         dispatch('openMsg', '服务器出了点问题,请重试')
+        dispatch('endLoading')
         return
       }
 
@@ -99,6 +104,9 @@ export default {
           return worker.work_number + ' ' + worker.name
         })
       }
+    }).catch(() => {
+      dispatch('openMsg', '未知错误，请刷新页面重试，若未解决，请联系管理员')
+      dispatch('endLoading')
     })
   },
   FETCH_ALL_TASKS ({state, dispatch}) {

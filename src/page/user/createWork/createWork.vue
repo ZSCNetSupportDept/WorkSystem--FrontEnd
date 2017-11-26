@@ -73,9 +73,7 @@
     computed: {
       ...mapState({
         isWorked: state => state.base.isWorked,
-        isOpen: state => state.base.isOpen,
-        toolKit: state => state.createWork.toolKit,
-        workPlace: state => state.base.info.workPlace
+        isOpen: state => state.base.isOpen
       }),
       choosePlace: {
         get () {

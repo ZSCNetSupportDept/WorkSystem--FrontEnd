@@ -6,9 +6,9 @@
       </div><!-- / detail__title -->
       <div class="detail__content">
         <label for="begin">起始日期</label>
-        <input v-model="beginDate" type="date" id="begin" :value="beginDate">
+        <input v-model="beginDate" type="date" id="begin">
         <label for="end">结束日期</label>
-        <input v-model="endDate" type="date" id="end" :value="endDate">
+        <input v-model="endDate" type="date" id="end">
 
         <buttons value="查询" :click="submit"></buttons>
       </div><!-- / detail__content -->

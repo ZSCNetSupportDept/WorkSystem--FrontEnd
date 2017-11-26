@@ -78,7 +78,7 @@
             </li>
           </ul>
         </li>
-        <hr color="#3e3d3a">
+        <!--<hr color="#3e3d3a">-->
         <li>
           <router-link :to="{ name:'overview'}" @click.native="closeAll">概览</router-link>
         </li>
@@ -89,10 +89,10 @@
               <router-link :to="{ name:'contacts'}" @click.native="closeAll">常用联系电话</router-link>
             </li>
             <li>
-              <a href="http://util.sola.love/yue" target="_blank" @click="closeAll">宽带余额查询</a>
+              <a href="http://util.sola.love/yue" target="_blank" rel="noopener" @click="closeAll">宽带余额查询</a>
               <!--<router-link :to="{ name:'searchaccount'}" @click.native="closeAll">宽带余额查询</router-link>-->
             </li>
-            <li><a href="http://wiki.sola.love" target="_blank" @click="closeAll">网维wiki</a></li>
+            <li><a href="http://wiki.sola.love" target="_blank" rel="noopener" @click="closeAll">网维wiki</a></li>
           </ul>
         </li>
         <li :class="{ 'open': navOpen ==='经验' }">
@@ -196,7 +196,6 @@
         isLog: state => state.base.isLog,
         message: state => state.base.message,
         openMsg: state => state.base.openMsg,
-        isOpen: state => state.base.isOpen,
         isShadow: state => state.base.isShadow,
         loading: state => state.base.loading
       }),
@@ -232,14 +231,7 @@
 
 <style scoped>
   .home {
-    /*position: relative;*/
-    /*width: 100%;*/
-    /*height: 100%;*/
-    /*position: fixed;*/
-    /*top: 0;*/
-    /*left: 0;*/
     background-color: #f9f9f9;
-    /*overflow-y: visible;*/
   }
 
   nav {

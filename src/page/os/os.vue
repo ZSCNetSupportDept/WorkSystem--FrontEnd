@@ -494,7 +494,7 @@
     position: absolute;
     width: 100%;
     background-color: #54364a;
-    background-image: url("../assets/images/a.jpg");
+    /*background-image: url("../assets/images/a.jpg");*/
     background-size: cover;
   }
 

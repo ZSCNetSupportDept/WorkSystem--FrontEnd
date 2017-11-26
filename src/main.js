@@ -5,9 +5,11 @@ import App from './App'
 import router from './router'
 import store from './store'
 import 'whatwg-fetch'
-// import {getCookie} from './util'
 import 'babel-polyfill'
 // import ECharts from 'vue-echarts'
+import 'assets/css/cssreset.css'
+import 'assets/css/cv-zsc.css'
+import 'assets/css/common.css'
 
 // Vue.component('chart', ECharts)
 

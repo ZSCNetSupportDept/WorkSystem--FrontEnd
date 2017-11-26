@@ -1,0 +1,242 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for src/store/mutation-types.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../prettify.css" />
+    <link rel="stylesheet" href="../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../index.html">all files</a> / <a href="index.html">src/store/</a> mutation-types.js
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>42/42</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>0/0</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>0/0</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>42/42</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line high'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">/**
+ * Created by Clovin on 2017/3/2.
+ */
+&nbsp;
+/*    base    */
+export const SET_INFO = 'SET_INFO'
+export const SET_TODAY_WORKERS = 'SET_TODAY_WORKERS'
+export const SET_IS_WORKED = 'SET_IS_WORKED'
+export const SET_NOW_PLACE = 'SET_NOW_PLACE'
+export const SET_IS_LOG = 'SET_IS_LOG'
+export const SET_LOADING = 'SET_LOADING'
+export const SET_OPEN_MSG = 'SET_OPEN_MSG'
+export const SET_MESSAGE = 'SET_MESSAGE'
+export const SET_WORK_DAY = 'SET_WORK_DAY'
+export const SET_WORK_PLACE = 'SET_WORK_PLACE'
+export const SET_IS_OPEN = 'SET_IS_OPEN'
+export const SET_IS_SHADOW = 'SET_IS_SHADOW'
+&nbsp;
+/*   createWork  */
+export const SET_CHOOSE_PLACE = 'SET_CHOOSE_PLACE'
+export const SET_TOOLS_DETAIL = 'SET_TOOLS_DETAIL'
+export const SET_HAS_TOOLS = 'SET_HAS_TOOLS'
+export const UPDATE_TOOL_KIT = 'UPDATE_TOOL_KIT'
+&nbsp;
+/*   createRepair   */
+export const SET_REPAIR_STATUS = 'SET_REPAIR_STATUS'
+export const SET_USER_PHONE = 'SET_USER_PHONE'
+export const SET_USER_PLACE = 'SET_USER_PLACE'
+export const SET_USER_HOUSE = 'SET_USER_HOUSE'
+export const SET_NET_INFO = 'SET_NET_INFO'
+export const SET_NET_ACCOUNT = 'SET_NET_ACCOUNT'
+export const SET_REPAIR_DETAIL = 'SET_REPAIR_DETAIL'
+export const SET_REPAIR_WORKERS = 'SET_REPAIR_WORKERS'
+&nbsp;
+/*   overview    */
+export const SET_ANNOUNCE = 'SET_ANNOUNCE'
+export const SET_OVERVIEW = 'SET_OVERVIEW'
+&nbsp;
+/*   ISPtasks      */
+export const SET_ISP_TASKS = 'SET_ISP_TASKS'
+export const SET_ISP_CURRENT_TASK = 'SET_ISP_CURRENT_TASK'
+export const SET_ISP_REPAIR_DETAIL = 'SET_ISP_REPAIR_DETAIL'
+export const SET_ISP_REPAIR_WORKERS = 'SET_ISP_REPAIR_WORKERS'
+export const SET_ISP_REPAIR_STATUS = 'SET_ISP_REPAIR_STATUS'
+export const SET_ISP_CURRENT_TYPE = 'SET_ISP_CURRENT_TYPE'
+export const SET_ISP_WORKERS = 'SET_ISP_WORKERS'
+&nbsp;
+/*    newTask   */
+export const SET_NT_PROPERTY = 'SET_NT_PROPERTY'
+export const SET_NT_STATUS = 'SET_NT_STATUS'
+export const SET_NT_USER_PHONE = 'SET_NT_USER_PHONE'
+export const SET_NT_USER_PLACE = 'SET_NT_USER_PLACE'
+export const SET_NT_USER_HOUSE = 'SET_NT_USER_HOUSE'
+export const SET_NT_NET_INFO = 'SET_NT_NET_INFO'
+export const SET_NT_NET_ACCOUNT = 'SET_NT_NET_ACCOUNT'
+export const SET_NT_INTRODUCTION = 'SET_NT_INTRODUCTION'
+&nbsp;
+/*    todayFinish    */
+export const SET_TF_SEARCH = 'SET_TF_SEARCH'
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Sun Nov 26 2017 08:18:28 GMT+0800 (CST)
+</div>
+</div>
+<script src="../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../sorter.js"></script>
+</body>
+</html>

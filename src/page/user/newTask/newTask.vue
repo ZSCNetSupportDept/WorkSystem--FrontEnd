@@ -76,7 +76,6 @@
 
 <script>
   import textInput from '../../../components/textInput.vue'
-  import checkBoxGroup from '../../../components/checkBoxGroup.vue'
   import checkBox from '../../../components/checkBox.vue'
   import selectBox from '../../../components/selectBox.vue'
   import buttons from '../../../components/button.vue'
@@ -85,7 +84,6 @@
   export default {
     components: {
       'textInput': textInput,
-      'checkBoxGroup': checkBoxGroup,
       'checkBox': checkBox,
       'selectBox': selectBox,
       'buttons': buttons
